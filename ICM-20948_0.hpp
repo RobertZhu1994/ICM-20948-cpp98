@@ -30,7 +30,7 @@ public:
 	
 	/*
 	 * REG WHO_AM_I:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct WHO_AM_I
 	{
@@ -39,7 +39,7 @@ public:
 		/* Bits WHO_AM_I: */
 		/*
 		 * Register to indicate to user which device is being accessed.
-		 *           The value for ICM-20948 is 0xEA. 
+		 * The value for ICM-20948 is 0xEA.
 		 */
 		struct WHO_AM_I_
 		{
@@ -69,7 +69,7 @@ public:
 	
 	/*
 	 * REG USER_CTRL:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct USER_CTRL
 	{
@@ -78,7 +78,7 @@ public:
 		/* Bits DMP_EN: */
 		/*
 		 * 1 - Enables DMP features.
-		 *           0 - DMP features are disabled after the current processing round has completed. 
+		 * 0 - DMP features are disabled after the current processing round has completed.
 		 */
 		struct DMP_EN
 		{
@@ -88,9 +88,9 @@ public:
 		/* Bits FIFO_EN: */
 		/*
 		 * 1 - Enable FIFO operation mode.
-		 *           0 - Disable FIFO access from serial interface.
-		 *           To disable FIFO writes by DMA, use FIFO_EN register. To disable possible FIFO writes
-		 *           from DMP, disable the DMP. 
+		 * 0 - Disable FIFO access from serial interface.
+		 * To disable FIFO writes by DMA, use FIFO_EN register. To disable possible FIFO writes
+		 * from DMP, disable the DMP.
 		 */
 		struct FIFO_EN
 		{
@@ -100,9 +100,9 @@ public:
 		/* Bits I2C_MST_EN: */
 		/*
 		 * 1 - Enable the I2C Master I/F module; pins ES_DA and ES_SCL are isolated from pins
-		 *           SDA/SDI and SCL/ SCLK.
-		 *           0 - Disable I2C Master I/F module; pins ES_DA and ES_SCL are logically driven by pins
-		 *           SDA/SDI and SCL/ SCLK. 
+		 * SDA/SDI and SCL/ SCLK.
+		 * 0 - Disable I2C Master I/F module; pins ES_DA and ES_SCL are logically driven by pins
+		 * SDA/SDI and SCL/ SCLK.
 		 */
 		struct I2C_MST_EN
 		{
@@ -119,7 +119,7 @@ public:
 		/* Bits DMP_RST: */
 		/*
 		 * 1 - Reset DMP module. Reset is asynchronous. This bit auto clears after one clock
-		 *           cycle of the internal 20 MHz clock. 
+		 * cycle of the internal 20 MHz clock.
 		 */
 		struct DMP_RST
 		{
@@ -129,7 +129,7 @@ public:
 		/* Bits SRAM_RST: */
 		/*
 		 * 1 - Reset SRAM module. Reset is asynchronous. This bit auto clears after one clock
-		 *           cycle of the internal 20 MHz clock. 
+		 * cycle of the internal 20 MHz clock.
 		 */
 		struct SRAM_RST
 		{
@@ -139,9 +139,9 @@ public:
 		/* Bits I2C_MST_RST: */
 		/*
 		 * 1 - Reset I2C Master module. Reset is asynchronous. This bit auto clears after one
-		 *           clock cycle of the internal 20 MHz clock.
-		 *           NOTE: This bit should only be set when the I2C master has hung. If this bit is set during an active
-		 *           I2C master transaction, the I2C slave will hang, which will require the host to reset the slave. 
+		 * clock cycle of the internal 20 MHz clock.
+		 * NOTE: This bit should only be set when the I2C master has hung. If this bit is set during an active
+		 * I2C master transaction, the I2C slave will hang, which will require the host to reset the slave.
 		 */
 		struct I2C_MST_RST
 		{
@@ -177,7 +177,7 @@ public:
 	
 	/*
 	 * REG LP_CONFIG:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct LP_CONFIG
 	{
@@ -192,8 +192,8 @@ public:
 		/* Bits I2C_MST_CYCLE: */
 		/*
 		 * 1 - Operate I2C master in duty cycled mode. ODR is determined by
-		 *           I2C_MST_ODR_CONFIG register.
-		 *           0 - Disable I2C master duty cycled mode. 
+		 * I2C_MST_ODR_CONFIG register.
+		 * 0 - Disable I2C master duty cycled mode.
 		 */
 		struct I2C_MST_CYCLE
 		{
@@ -203,8 +203,8 @@ public:
 		/* Bits ACCEL_CYCLE: */
 		/*
 		 * 1 - Operate ACCEL in duty cycled mode. ODR is determined by ACCEL_SMPLRT_DIV
-		 *           register.
-		 *           0 - Disable ACCEL duty cycled mode. 
+		 * register.
+		 * 0 - Disable ACCEL duty cycled mode.
 		 */
 		struct ACCEL_CYCLE
 		{
@@ -214,8 +214,8 @@ public:
 		/* Bits GYRO_CYCLE: */
 		/*
 		 * 1 - Operate GYRO in duty cycled mode. ODR is determined by GYRO_SMPLRT_DIV
-		 *           register.
-		 *           0 - Disable GYRO duty cycled mode. 
+		 * register.
+		 * 0 - Disable GYRO duty cycled mode.
 		 */
 		struct GYRO_CYCLE
 		{
@@ -251,7 +251,7 @@ public:
 	
 	/*
 	 * REG PWR_MGMT_1:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct PWR_MGMT_1
 	{
@@ -260,7 +260,7 @@ public:
 		/* Bits DEVICE_RESET: */
 		/*
 		 * 1 - Reset the internal registers and restores the default settings. Write a 1 to set the
-		 *           reset, the bit will auto clear. 
+		 * reset, the bit will auto clear.
 		 */
 		struct DEVICE_RESET
 		{
@@ -270,7 +270,7 @@ public:
 		/* Bits SLEEP: */
 		/*
 		 * When set, the chip is set to sleep mode (in sleep mode all analog is powered off).
-		 *           Clearing the bit wakes the chip from sleep mode. 
+		 * Clearing the bit wakes the chip from sleep mode.
 		 */
 		struct SLEEP
 		{
@@ -280,12 +280,12 @@ public:
 		/* Bits LP_EN: */
 		/*
 		 * The LP_EN only affects the digital circuitry, it helps to reduce the digital current when
-		 *           sensors are in LP mode. Please note that the sensors themselves are set in LP mode
-		 *           by the LP_CONFIG register settings. Sensors in LP mode, and use of LP_EN bit
-		 *           together help to reduce overall current. The bit settings are:
-		 *           1: Turn on low power feature.
-		 *           0: Turn off low power feature.
-		 *           LP_EN has no effect when the sensors are in low-noise mode. 
+		 * sensors are in LP mode. Please note that the sensors themselves are set in LP mode
+		 * by the LP_CONFIG register settings. Sensors in LP mode, and use of LP_EN bit
+		 * together help to reduce overall current. The bit settings are:
+		 * 1: Turn on low power feature.
+		 * 0: Turn off low power feature.
+		 * LP_EN has no effect when the sensors are in low-noise mode.
 		 */
 		struct LP_EN
 		{
@@ -308,11 +308,11 @@ public:
 		/* Bits CLKSEL: */
 		/*
 		 * Code: Clock Source
-		 *           0: Internal 20 MHz oscillator
-		 *           1-5: Auto selects the best available clock source - PLL if ready, else use the Internal oscillator
-		 *           6: Internal 20 MHz oscillator
-		 *           7: Stops the clock and keeps timing generator in reset
-		 *           NOTE: CLKSEL[2:0] should be set to 1~5 to achieve full gyroscope performance. 
+		 * 0: Internal 20 MHz oscillator
+		 * 1-5: Auto selects the best available clock source - PLL if ready, else use the Internal oscillator
+		 * 6: Internal 20 MHz oscillator
+		 * 7: Stops the clock and keeps timing generator in reset
+		 * NOTE: CLKSEL[2:0] should be set to 1~5 to achieve full gyroscope performance.
 		 */
 		struct CLKSEL
 		{
@@ -342,7 +342,7 @@ public:
 	
 	/*
 	 * REG PWR_MGMT_2:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct PWR_MGMT_2
 	{
@@ -357,8 +357,8 @@ public:
 		/* Bits DISABLE_ACCEL: */
 		/*
 		 * Only the following values are applicable:
-		 *           111 - Accelerometer (all axes) disabled.
-		 *           000 - Accelerometer (all axes) on. 
+		 * 111 - Accelerometer (all axes) disabled.
+		 * 000 - Accelerometer (all axes) on.
 		 */
 		struct DISABLE_ACCEL
 		{
@@ -368,8 +368,8 @@ public:
 		/* Bits DISABLE_GYRO: */
 		/*
 		 * Only the following values are applicable:
-		 *           111 - Gyroscope (all axes) disabled.
-		 *           000 - Gyroscope (all axes) on. 
+		 * 111 - Gyroscope (all axes) disabled.
+		 * 000 - Gyroscope (all axes) on.
 		 */
 		struct DISABLE_GYRO
 		{
@@ -399,7 +399,7 @@ public:
 	
 	/*
 	 * REG INT_PIN_CFG:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct INT_PIN_CFG
 	{
@@ -408,7 +408,7 @@ public:
 		/* Bits INT1_ACTL: */
 		/*
 		 * 1 - The logic level for INT1 pin is active low.
-		 *           0 - The logic level for INT1 pin is active high. 
+		 * 0 - The logic level for INT1 pin is active high.
 		 */
 		struct INT1_ACTL
 		{
@@ -418,7 +418,7 @@ public:
 		/* Bits INT1_OPEN: */
 		/*
 		 * 1 - INT1 pin is configured as open drain.
-		 *           0 - INT1 pin is configured as push-pull. 
+		 * 0 - INT1 pin is configured as push-pull.
 		 */
 		struct INT1_OPEN
 		{
@@ -428,7 +428,7 @@ public:
 		/* Bits INT1_LATCH__EN: */
 		/*
 		 * 1 - INT1 pin level held until interrupt status is cleared.
-		 *           0 - INT1 pin indicates interrupt pulse is width 50 µs. 
+		 * 0 - INT1 pin indicates interrupt pulse is width 50 µs.
 		 */
 		struct INT1_LATCH__EN
 		{
@@ -438,14 +438,14 @@ public:
 		/* Bits INT_ANYRD_2CLEAR: */
 		/*
 		 * 1 - Interrupt status in INT_STATUS is cleared (set to 0) if any read operation is
-		 *           performed.
-		 *           0 - Interrupt status in INT_STATUS is cleared (set to 0) only by reading INT_STATUS
-		 *           register.
-		 *           This bit only affects the interrupt status bits that are contained in the register
-		 *           INT_STATUS, and the corresponding hardware interrupt.
-		 *           This bit does not affect the interrupt status bits that are contained in registers
-		 *           INT_STATUS_1, INT_STATUS_2, INT_STATUS_3, and the corresponding hardware
-		 *           interrupt. 
+		 * performed.
+		 * 0 - Interrupt status in INT_STATUS is cleared (set to 0) only by reading INT_STATUS
+		 * register.
+		 * This bit only affects the interrupt status bits that are contained in the register
+		 * INT_STATUS, and the corresponding hardware interrupt.
+		 * This bit does not affect the interrupt status bits that are contained in registers
+		 * INT_STATUS_1, INT_STATUS_2, INT_STATUS_3, and the corresponding hardware
+		 * interrupt.
 		 */
 		struct INT_ANYRD_2CLEAR
 		{
@@ -455,7 +455,7 @@ public:
 		/* Bits ACTL_FSYNC: */
 		/*
 		 * 1 - The logic level for the FSYNC pin as an interrupt to the ICM-20948 is active low.
-		 *           0 - The logic level for the FSYNC pin as an interrupt to the ICM-20948 is active high. 
+		 * 0 - The logic level for the FSYNC pin as an interrupt to the ICM-20948 is active high.
 		 */
 		struct ACTL_FSYNC
 		{
@@ -465,9 +465,9 @@ public:
 		/* Bits FSYNC_INT_MODE_EN: */
 		/*
 		 * 1 - This enables the FSYNC pin to be used as an interrupt. A transition to the active
-		 *           level described by the ACTL_FSYNC bit will cause an interrupt. The status of the
-		 *           interrupt is read in the I2C Master Status register PASS_THROUGH bit.
-		 *           0 - This disables the FSYNC pin from causing an interrupt. 
+		 * level described by the ACTL_FSYNC bit will cause an interrupt. The status of the
+		 * interrupt is read in the I2C Master Status register PASS_THROUGH bit.
+		 * 0 - This disables the FSYNC pin from causing an interrupt.
 		 */
 		struct FSYNC_INT_MODE_EN
 		{
@@ -477,7 +477,7 @@ public:
 		/* Bits BYPASS_EN: */
 		/*
 		 * When asserted, the I2C_MASTER interface pins (ES_CL and ES_DA) will go into
-		 *           ‘bypass mode’ when the I2C master interface is disabled. 
+		 * ‘bypass mode’ when the I2C master interface is disabled.
 		 */
 		struct BYPASS_EN
 		{
@@ -513,7 +513,7 @@ public:
 	
 	/*
 	 * REG INT_ENABLE:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct INT_ENABLE
 	{
@@ -522,7 +522,7 @@ public:
 		/* Bits REG_WOF_EN: */
 		/*
 		 * 1 - Enable wake on FSYNC interrupt.
-		 *           0 - Function is disabled. 
+		 * 0 - Function is disabled.
 		 */
 		struct REG_WOF_EN
 		{
@@ -538,7 +538,7 @@ public:
 		/* Bits WOM_INT_EN: */
 		/*
 		 * 1 - Enable interrupt for wake on motion to propagate to interrupt pin 1.
-		 *           0 - Function is disabled. 
+		 * 0 - Function is disabled.
 		 */
 		struct WOM_INT_EN
 		{
@@ -548,8 +548,8 @@ public:
 		/* Bits PLL_RDY_EN: */
 		/*
 		 * 1 - Enable PLL RDY interrupt (PLL RDY means PLL is running and in use as the clock
-		 *           source for the system) to propagate to interrupt pin 1.
-		 *           0 - Function is disabled. 
+		 * source for the system) to propagate to interrupt pin 1.
+		 * 0 - Function is disabled.
 		 */
 		struct PLL_RDY_EN
 		{
@@ -559,7 +559,7 @@ public:
 		/* Bits DMP_INT1_EN: */
 		/*
 		 * 1 - Enable DMP interrupt to propagate to interrupt pin 1.
-		 *           0 - Function is disabled. 
+		 * 0 - Function is disabled.
 		 */
 		struct DMP_INT1_EN
 		{
@@ -569,7 +569,7 @@ public:
 		/* Bits I2C_MST_INT_EN: */
 		/*
 		 * 1 - Enable I2C master interrupt to propagate to interrupt pin 1.
-		 *           0 - Function is disabled. 
+		 * 0 - Function is disabled.
 		 */
 		struct I2C_MST_INT_EN
 		{
@@ -599,7 +599,7 @@ public:
 	
 	/*
 	 * REG INT_ENABLE_1:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct INT_ENABLE_1
 	{
@@ -614,8 +614,8 @@ public:
 		/* Bits RAW_DATA_0_RDY_EN: */
 		/*
 		 * 1 - Enable raw data ready interrupt from any sensor to propagate to interrupt
-		 *           pin 1.
-		 *           0 - Function is disabled. 
+		 * pin 1.
+		 * 0 - Function is disabled.
 		 */
 		struct RAW_DATA_0_RDY_EN
 		{
@@ -645,7 +645,7 @@ public:
 	
 	/*
 	 * REG INT_ENABLE_2:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct INT_ENABLE_2
 	{
@@ -660,7 +660,7 @@ public:
 		/* Bits FIFO_OVERFLOW_EN: */
 		/*
 		 * 1 - Enable interrupt for FIFO overflow to propagate to interrupt pin 1.
-		 *           0 - Function is disabled. 
+		 * 0 - Function is disabled.
 		 */
 		struct FIFO_OVERFLOW_EN
 		{
@@ -690,7 +690,7 @@ public:
 	
 	/*
 	 * REG INT_ENABLE_3:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct INT_ENABLE_3
 	{
@@ -705,7 +705,7 @@ public:
 		/* Bits FIFO_WM_EN: */
 		/*
 		 * 1 - Enable interrupt for FIFO watermark to propagate to interrupt pin 1.
-		 *           0 - Function is disabled. 
+		 * 0 - Function is disabled.
 		 */
 		struct FIFO_WM_EN
 		{
@@ -735,7 +735,7 @@ public:
 	
 	/*
 	 * REG I2C_MST_STATUS:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct I2C_MST_STATUS
 	{
@@ -744,9 +744,9 @@ public:
 		/* Bits PASS_THROUGH: */
 		/*
 		 * Status of FSYNC interrupt - used as a way to pass an external interrupt through this
-		 *           chip to the host.  If enabled in the INT_PIN_CFG register by asserting bit
-		 *           FSYNC_INT_MODE_EN, this will cause an interrupt.  A read of this register clears all
-		 *           status bits in this register. 
+		 * chip to the host.  If enabled in the INT_PIN_CFG register by asserting bit
+		 * FSYNC_INT_MODE_EN, this will cause an interrupt.  A read of this register clears all
+		 * status bits in this register.
 		 */
 		struct PASS_THROUGH
 		{
@@ -756,8 +756,8 @@ public:
 		/* Bits I2C_SLV4_DONE: */
 		/*
 		 * Asserted when I2C slave 4’s transfer is complete, will cause an interrupt if bit
-		 *           I2C_MST_INT_EN in the INT_ENABLE register is asserted, and if the
-		 *           SLV4_DONE_INT_EN bit is asserted in the I2C_SLV4_CTRL register. 
+		 * I2C_MST_INT_EN in the INT_ENABLE register is asserted, and if the
+		 * SLV4_DONE_INT_EN bit is asserted in the I2C_SLV4_CTRL register.
 		 */
 		struct I2C_SLV4_DONE
 		{
@@ -767,7 +767,7 @@ public:
 		/* Bits I2C_LOST_ARB: */
 		/*
 		 * Asserted when I2C slave loses arbitration of the I2C bus, will cause an interrupt if bit
-		 *           I2C_MST_INT_EN in the INT_ENABLE register is asserted. 
+		 * I2C_MST_INT_EN in the INT_ENABLE register is asserted.
 		 */
 		struct I2C_LOST_ARB
 		{
@@ -777,7 +777,7 @@ public:
 		/* Bits I2C_SLV4_NACK: */
 		/*
 		 * Asserted when slave 4 receives a NACK, will cause an interrupt if bit I2C_MST_INT_EN
-		 *           in the INT_ENABLE register is asserted. 
+		 * in the INT_ENABLE register is asserted.
 		 */
 		struct I2C_SLV4_NACK
 		{
@@ -787,7 +787,7 @@ public:
 		/* Bits I2C_SLV3_NACK: */
 		/*
 		 * Asserted when slave 3 receives a NACK, will cause an interrupt if bit I2C_MST_INT_EN
-		 *           in the INT_ENABLE register is asserted. 
+		 * in the INT_ENABLE register is asserted.
 		 */
 		struct I2C_SLV3_NACK
 		{
@@ -797,7 +797,7 @@ public:
 		/* Bits I2C_SLV2_NACK: */
 		/*
 		 * Asserted when slave 2 receives a NACK, will cause an interrupt if bit I2C_MST_INT_EN
-		 *           in the INT_ENABLE register is asserted. 
+		 * in the INT_ENABLE register is asserted.
 		 */
 		struct I2C_SLV2_NACK
 		{
@@ -807,7 +807,7 @@ public:
 		/* Bits I2C_SLV1_NACK: */
 		/*
 		 * Asserted when slave 1 receives a NACK, will cause an interrupt if bit I2C_MST_INT_EN
-		 *           in the INT_ENABLE register is asserted. 
+		 * in the INT_ENABLE register is asserted.
 		 */
 		struct I2C_SLV1_NACK
 		{
@@ -817,7 +817,7 @@ public:
 		/* Bits I2C_SLV0_NACK: */
 		/*
 		 * Asserted when slave 0 receives a NACK, will cause an interrupt if bit I2C_MST_INT_EN
-		 *           in the INT_ENABLE register is asserted. 
+		 * in the INT_ENABLE register is asserted.
 		 */
 		struct I2C_SLV0_NACK
 		{
@@ -847,7 +847,7 @@ public:
 	
 	/*
 	 * REG INT_STATUS:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct INT_STATUS
 	{
@@ -910,7 +910,7 @@ public:
 	
 	/*
 	 * REG INT_STATUS_1:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct INT_STATUS_1
 	{
@@ -952,7 +952,7 @@ public:
 	
 	/*
 	 * REG INT_STATUS_2:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct INT_STATUS_2
 	{
@@ -994,7 +994,7 @@ public:
 	
 	/*
 	 * REG INT_STATUS_3:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct INT_STATUS_3
 	{
@@ -1036,7 +1036,7 @@ public:
 	
 	/*
 	 * REG DELAY_TIMEH:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct DELAY_TIMEH
 	{
@@ -1045,10 +1045,10 @@ public:
 		/* Bits DELAY_TIMEH: */
 		/*
 		 * High-byte of delay time between FSYNC event and the 1st gyro ODR event (after the
-		 *           FSYNC event).
-		 *           Reading DELAY_TIMEH will lock DELAY_TIMEH and DELAY_TIMEL from the next
-		 *           update.  Reading DELAY_TIMEL will unlock DELAY_TIMEH and DELAY_TIMEL to take
-		 *           the next update due to an FSYNC event. 
+		 * FSYNC event).
+		 * Reading DELAY_TIMEH will lock DELAY_TIMEH and DELAY_TIMEL from the next
+		 * update.  Reading DELAY_TIMEL will unlock DELAY_TIMEH and DELAY_TIMEL to take
+		 * the next update due to an FSYNC event.
 		 */
 		struct DELAY_TIMEH_
 		{
@@ -1078,7 +1078,7 @@ public:
 	
 	/*
 	 * REG DELAY_TIMEL:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct DELAY_TIMEL
 	{
@@ -1087,11 +1087,11 @@ public:
 		/* Bits DELAY_TIMEL: */
 		/*
 		 * Low-byte of delay time between FSYNC event and the 1st gyro ODR event (after the
-		 *           FSYNC event).
-		 *           Reading DELAY_TIMEH will lock DELAY_TIMEH and DELAY_TIMEL from the next
-		 *           update. Reading DELAY_TIMEL will unlock DELAY_TIMEH and DELAY_TIMEL to take
-		 *           the next update due to an FSYNC event.
-		 *           Delay time in µs = (DELAY_TIMEH * 256 +  DELAY_TIMEL) * 0.9645 
+		 * FSYNC event).
+		 * Reading DELAY_TIMEH will lock DELAY_TIMEH and DELAY_TIMEL from the next
+		 * update. Reading DELAY_TIMEL will unlock DELAY_TIMEH and DELAY_TIMEL to take
+		 * the next update due to an FSYNC event.
+		 * Delay time in µs = (DELAY_TIMEH * 256 +  DELAY_TIMEL) * 0.9645
 		 */
 		struct DELAY_TIMEL_
 		{
@@ -1121,7 +1121,7 @@ public:
 	
 	/*
 	 * REG ACCEL_XOUT_H:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct ACCEL_XOUT_H
 	{
@@ -1157,7 +1157,7 @@ public:
 	
 	/*
 	 * REG ACCEL_XOUT_L:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct ACCEL_XOUT_L
 	{
@@ -1166,9 +1166,9 @@ public:
 		/* Bits ACCEL_XOUT_L: */
 		/*
 		 * Low Byte of Accelerometer X-axis data.
-		 *           To convert the output of the accelerometer to acceleration measurement use the
-		 *           formula below:
-		 *           X_acceleration = ACCEL_XOUT/Accel_Sensitivity 
+		 * To convert the output of the accelerometer to acceleration measurement use the
+		 * formula below:
+		 * X_acceleration = ACCEL_XOUT/Accel_Sensitivity
 		 */
 		struct ACCEL_XOUT_L_
 		{
@@ -1198,7 +1198,7 @@ public:
 	
 	/*
 	 * REG ACCEL_YOUT_H:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct ACCEL_YOUT_H
 	{
@@ -1234,7 +1234,7 @@ public:
 	
 	/*
 	 * REG ACCEL_YOUT_L:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct ACCEL_YOUT_L
 	{
@@ -1243,9 +1243,9 @@ public:
 		/* Bits ACCEL_YOUT_L: */
 		/*
 		 * Low Byte of Accelerometer Y-axis data.
-		 *           To convert the output of the accelerometer to acceleration measurement use the
-		 *           formula below:
-		 *           Y_acceleration = ACCEL_YOUT/Accel_Sensitivity 
+		 * To convert the output of the accelerometer to acceleration measurement use the
+		 * formula below:
+		 * Y_acceleration = ACCEL_YOUT/Accel_Sensitivity
 		 */
 		struct ACCEL_YOUT_L_
 		{
@@ -1275,7 +1275,7 @@ public:
 	
 	/*
 	 * REG ACCEL_ZOUT_H:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct ACCEL_ZOUT_H
 	{
@@ -1311,7 +1311,7 @@ public:
 	
 	/*
 	 * REG ACCEL_ZOUT_L:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct ACCEL_ZOUT_L
 	{
@@ -1320,9 +1320,9 @@ public:
 		/* Bits ACCEL_ZOUT_L: */
 		/*
 		 * Low Byte of Accelerometer Z-axis data.
-		 *           To convert the output of the accelerometer to acceleration measurement use the
-		 *           formula below:
-		 *           Z_acceleration = ACCEL_ZOUT/Accel_Sensitivity 
+		 * To convert the output of the accelerometer to acceleration measurement use the
+		 * formula below:
+		 * Z_acceleration = ACCEL_ZOUT/Accel_Sensitivity
 		 */
 		struct ACCEL_ZOUT_L_
 		{
@@ -1352,7 +1352,7 @@ public:
 	
 	/*
 	 * REG GYRO_XOUT_H:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct GYRO_XOUT_H
 	{
@@ -1388,7 +1388,7 @@ public:
 	
 	/*
 	 * REG GYRO_XOUT_L:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct GYRO_XOUT_L
 	{
@@ -1397,9 +1397,9 @@ public:
 		/* Bits GYRO_XOUT_L: */
 		/*
 		 * Low Byte of Gyroscope X-axis data.
-		 *           To convert the output of the gyroscope to angular rate measurement use the
-		 *           formula below:
-		 *           X_angular_rate = GYRO_XOUT/Gyro_Sensitivity 
+		 * To convert the output of the gyroscope to angular rate measurement use the
+		 * formula below:
+		 * X_angular_rate = GYRO_XOUT/Gyro_Sensitivity
 		 */
 		struct GYRO_XOUT_L_
 		{
@@ -1429,7 +1429,7 @@ public:
 	
 	/*
 	 * REG GYRO_YOUT_H:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct GYRO_YOUT_H
 	{
@@ -1465,7 +1465,7 @@ public:
 	
 	/*
 	 * REG GYRO_YOUT_L:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct GYRO_YOUT_L
 	{
@@ -1474,9 +1474,9 @@ public:
 		/* Bits GYRO_YOUT_L: */
 		/*
 		 * Low Byte of Gyroscope Y-axis data.
-		 *           To convert the output of the gyroscope to angular rate measurement use the
-		 *           formula below:
-		 *           Y_angular_rate = GYRO_YOUT/Gyro_Sensitivity 
+		 * To convert the output of the gyroscope to angular rate measurement use the
+		 * formula below:
+		 * Y_angular_rate = GYRO_YOUT/Gyro_Sensitivity
 		 */
 		struct GYRO_YOUT_L_
 		{
@@ -1506,7 +1506,7 @@ public:
 	
 	/*
 	 * REG GYRO_ZOUT_H:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct GYRO_ZOUT_H
 	{
@@ -1542,7 +1542,7 @@ public:
 	
 	/*
 	 * REG GYRO_ZOUT_L:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct GYRO_ZOUT_L
 	{
@@ -1551,9 +1551,9 @@ public:
 		/* Bits GYRO_ZOUT_L: */
 		/*
 		 * Low Byte of Gyroscope Z-axis data.
-		 *           To convert the output of the gyroscope to angular rate measurement use the
-		 *           formula below:
-		 *           Z_angular_rate = GYRO_ZOUT/Gyro_Sensitivity 
+		 * To convert the output of the gyroscope to angular rate measurement use the
+		 * formula below:
+		 * Z_angular_rate = GYRO_ZOUT/Gyro_Sensitivity
 		 */
 		struct GYRO_ZOUT_L_
 		{
@@ -1583,7 +1583,7 @@ public:
 	
 	/*
 	 * REG TEMP_OUT_H:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct TEMP_OUT_H
 	{
@@ -1619,7 +1619,7 @@ public:
 	
 	/*
 	 * REG TEMP_OUT_L:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct TEMP_OUT_L
 	{
@@ -1628,9 +1628,9 @@ public:
 		/* Bits TEMP_OUT_L: */
 		/*
 		 * Low Byte of Temp sensor data.
-		 *           To convert the output of the temperature sensor to degrees C use the following
-		 *           formula:
-		 *           TEMP_degC = ((TEMP_OUT - RoomTemp_Offset)/Temp_Sensitivity) + 21degC 
+		 * To convert the output of the temperature sensor to degrees C use the following
+		 * formula:
+		 * TEMP_degC = ((TEMP_OUT - RoomTemp_Offset)/Temp_Sensitivity) + 21degC
 		 */
 		struct TEMP_OUT_L_
 		{
@@ -1660,7 +1660,7 @@ public:
 	
 	/*
 	 * REG EXT_SLV_SENS_DATA_00:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct EXT_SLV_SENS_DATA_00
 	{
@@ -1669,8 +1669,8 @@ public:
 		/* Bits EXT_SLV_SENS_DATA_00: */
 		/*
 		 * Sensor data read from external I2C devices via the I2C master interface. The data
-		 *           stored is controlled by the I2C_SLV(0-4)_ADDR, I2C_SLV(0-4)_REG, and I2C_SLV(0-
-		 *           4)_CTRL registers. 
+		 * stored is controlled by the I2C_SLV(0-4)_ADDR, I2C_SLV(0-4)_REG, and I2C_SLV(0-
+		 * 4)_CTRL registers.
 		 */
 		struct EXT_SLV_SENS_DATA_00_
 		{
@@ -1700,7 +1700,7 @@ public:
 	
 	/*
 	 * REG EXT_SLV_SENS_DATA_01:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct EXT_SLV_SENS_DATA_01
 	{
@@ -1709,8 +1709,8 @@ public:
 		/* Bits EXT_SLV_SENS_DATA_01: */
 		/*
 		 * Sensor data read from external I2C devices via the I2C master interface. The data
-		 *           stored is controlled by the I2C_SLV(0-4)_ADDR, I2C_SLV(0-4)_REG, and I2C_SLV(0-
-		 *           4)_CTRL registers. 
+		 * stored is controlled by the I2C_SLV(0-4)_ADDR, I2C_SLV(0-4)_REG, and I2C_SLV(0-
+		 * 4)_CTRL registers.
 		 */
 		struct EXT_SLV_SENS_DATA_01_
 		{
@@ -1740,7 +1740,7 @@ public:
 	
 	/*
 	 * REG EXT_SLV_SENS_DATA_02:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct EXT_SLV_SENS_DATA_02
 	{
@@ -1749,8 +1749,8 @@ public:
 		/* Bits EXT_SLV_SENS_DATA_02: */
 		/*
 		 * Sensor data read from external I2C devices via the I2C master interface. The data
-		 *           stored is controlled by the I2C_SLV(0-4)_ADDR, I2C_SLV(0-4)_REG, and I2C_SLV(0-
-		 *           4)_CTRL registers. 
+		 * stored is controlled by the I2C_SLV(0-4)_ADDR, I2C_SLV(0-4)_REG, and I2C_SLV(0-
+		 * 4)_CTRL registers.
 		 */
 		struct EXT_SLV_SENS_DATA_02_
 		{
@@ -1780,7 +1780,7 @@ public:
 	
 	/*
 	 * REG EXT_SLV_SENS_DATA_03:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct EXT_SLV_SENS_DATA_03
 	{
@@ -1789,8 +1789,8 @@ public:
 		/* Bits EXT_SLV_SENS_DATA_03: */
 		/*
 		 * Sensor data read from external I2C devices via the I2C master interface. The data
-		 *           stored is controlled by the I2C_SLV(0-4)_ADDR, I2C_SLV(0-4)_REG, and I2C_SLV(0-
-		 *           4)_CTRL registers. 
+		 * stored is controlled by the I2C_SLV(0-4)_ADDR, I2C_SLV(0-4)_REG, and I2C_SLV(0-
+		 * 4)_CTRL registers.
 		 */
 		struct EXT_SLV_SENS_DATA_03_
 		{
@@ -1820,7 +1820,7 @@ public:
 	
 	/*
 	 * REG EXT_SLV_SENS_DATA_04:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct EXT_SLV_SENS_DATA_04
 	{
@@ -1829,8 +1829,8 @@ public:
 		/* Bits EXT_SLV_SENS_DATA_04: */
 		/*
 		 * Sensor data read from external I2C devices via the I2C master interface. The data
-		 *           stored is controlled by the I2C_SLV(0-4)_ADDR, I2C_SLV(0-4)_REG, and I2C_SLV(0-
-		 *           4)_CTRL registers. 
+		 * stored is controlled by the I2C_SLV(0-4)_ADDR, I2C_SLV(0-4)_REG, and I2C_SLV(0-
+		 * 4)_CTRL registers.
 		 */
 		struct EXT_SLV_SENS_DATA_04_
 		{
@@ -1860,7 +1860,7 @@ public:
 	
 	/*
 	 * REG EXT_SLV_SENS_DATA_05:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct EXT_SLV_SENS_DATA_05
 	{
@@ -1869,8 +1869,8 @@ public:
 		/* Bits EXT_SLV_SENS_DATA_05: */
 		/*
 		 * Sensor data read from external I2C devices via the I2C master interface. The data
-		 *           stored is controlled by the I2C_SLV(0-4)_ADDR, I2C_SLV(0-4)_REG, and I2C_SLV(0-
-		 *           4)_CTRL registers. 
+		 * stored is controlled by the I2C_SLV(0-4)_ADDR, I2C_SLV(0-4)_REG, and I2C_SLV(0-
+		 * 4)_CTRL registers.
 		 */
 		struct EXT_SLV_SENS_DATA_05_
 		{
@@ -1900,7 +1900,7 @@ public:
 	
 	/*
 	 * REG EXT_SLV_SENS_DATA_06:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct EXT_SLV_SENS_DATA_06
 	{
@@ -1909,8 +1909,8 @@ public:
 		/* Bits EXT_SLV_SENS_DATA_06: */
 		/*
 		 * Sensor data read from external I2C devices via the I2C master interface. The data
-		 *           stored is controlled by the I2C_SLV(0-4)_ADDR, I2C_SLV(0-4)_REG, and I2C_SLV(0-
-		 *           4)_CTRL registers. 
+		 * stored is controlled by the I2C_SLV(0-4)_ADDR, I2C_SLV(0-4)_REG, and I2C_SLV(0-
+		 * 4)_CTRL registers.
 		 */
 		struct EXT_SLV_SENS_DATA_06_
 		{
@@ -1940,7 +1940,7 @@ public:
 	
 	/*
 	 * REG EXT_SLV_SENS_DATA_07:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct EXT_SLV_SENS_DATA_07
 	{
@@ -1949,8 +1949,8 @@ public:
 		/* Bits EXT_SLV_SENS_DATA_07: */
 		/*
 		 * Sensor data read from external I2C devices via the I2C master interface. The data
-		 *           stored is controlled by the I2C_SLV(0-4)_ADDR, I2C_SLV(0-4)_REG, and I2C_SLV(0-
-		 *           4)_CTRL registers. 
+		 * stored is controlled by the I2C_SLV(0-4)_ADDR, I2C_SLV(0-4)_REG, and I2C_SLV(0-
+		 * 4)_CTRL registers.
 		 */
 		struct EXT_SLV_SENS_DATA_07_
 		{
@@ -1980,7 +1980,7 @@ public:
 	
 	/*
 	 * REG EXT_SLV_SENS_DATA_08:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct EXT_SLV_SENS_DATA_08
 	{
@@ -1989,8 +1989,8 @@ public:
 		/* Bits EXT_SLV_SENS_DATA_08: */
 		/*
 		 * Sensor data read from external I2C devices via the I2C master interface. The data
-		 *           stored is controlled by the I2C_SLV(0-4)_ADDR, I2C_SLV(0-4)_REG, and I2C_SLV(0-
-		 *           4)_CTRL registers. 
+		 * stored is controlled by the I2C_SLV(0-4)_ADDR, I2C_SLV(0-4)_REG, and I2C_SLV(0-
+		 * 4)_CTRL registers.
 		 */
 		struct EXT_SLV_SENS_DATA_08_
 		{
@@ -2020,7 +2020,7 @@ public:
 	
 	/*
 	 * REG EXT_SLV_SENS_DATA_09:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct EXT_SLV_SENS_DATA_09
 	{
@@ -2029,8 +2029,8 @@ public:
 		/* Bits EXT_SLV_SENS_DATA_09: */
 		/*
 		 * Sensor data read from external I2C devices via the I2C master interface. The data
-		 *           stored is controlled by the I2C_SLV(0-4)_ADDR, I2C_SLV(0-4)_REG, and I2C_SLV(0-
-		 *           4)_CTRL registers. 
+		 * stored is controlled by the I2C_SLV(0-4)_ADDR, I2C_SLV(0-4)_REG, and I2C_SLV(0-
+		 * 4)_CTRL registers.
 		 */
 		struct EXT_SLV_SENS_DATA_09_
 		{
@@ -2060,7 +2060,7 @@ public:
 	
 	/*
 	 * REG EXT_SLV_SENS_DATA_10:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct EXT_SLV_SENS_DATA_10
 	{
@@ -2069,8 +2069,8 @@ public:
 		/* Bits EXT_SLV_SENS_DATA_10: */
 		/*
 		 * Sensor data read from external I2C devices via the I2C master interface. The data
-		 *           stored is controlled by the I2C_SLV(0-4)_ADDR, I2C_SLV(0-4)_REG, and I2C_SLV(0-
-		 *           4)_CTRL registers. 
+		 * stored is controlled by the I2C_SLV(0-4)_ADDR, I2C_SLV(0-4)_REG, and I2C_SLV(0-
+		 * 4)_CTRL registers.
 		 */
 		struct EXT_SLV_SENS_DATA_10_
 		{
@@ -2100,7 +2100,7 @@ public:
 	
 	/*
 	 * REG EXT_SLV_SENS_DATA_11:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct EXT_SLV_SENS_DATA_11
 	{
@@ -2109,8 +2109,8 @@ public:
 		/* Bits EXT_SLV_SENS_DATA_11: */
 		/*
 		 * Sensor data read from external I2C devices via the I2C master interface. The data
-		 *           stored is controlled by the I2C_SLV(0-4)_ADDR, I2C_SLV(0-4)_REG, and I2C_SLV(0-
-		 *           4)_CTRL registers. 
+		 * stored is controlled by the I2C_SLV(0-4)_ADDR, I2C_SLV(0-4)_REG, and I2C_SLV(0-
+		 * 4)_CTRL registers.
 		 */
 		struct EXT_SLV_SENS_DATA_11_
 		{
@@ -2140,7 +2140,7 @@ public:
 	
 	/*
 	 * REG EXT_SLV_SENS_DATA_12:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct EXT_SLV_SENS_DATA_12
 	{
@@ -2149,8 +2149,8 @@ public:
 		/* Bits EXT_SLV_SENS_DATA_12: */
 		/*
 		 * Sensor data read from external I2C devices via the I2C master interface. The data
-		 *           stored is controlled by the I2C_SLV(0-4)_ADDR, I2C_SLV(0-4)_REG, and I2C_SLV(0-
-		 *           4)_CTRL registers. 
+		 * stored is controlled by the I2C_SLV(0-4)_ADDR, I2C_SLV(0-4)_REG, and I2C_SLV(0-
+		 * 4)_CTRL registers.
 		 */
 		struct EXT_SLV_SENS_DATA_12_
 		{
@@ -2180,7 +2180,7 @@ public:
 	
 	/*
 	 * REG EXT_SLV_SENS_DATA_13:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct EXT_SLV_SENS_DATA_13
 	{
@@ -2189,8 +2189,8 @@ public:
 		/* Bits EXT_SLV_SENS_DATA_13: */
 		/*
 		 * Sensor data read from external I2C devices via the I2C master interface. The data
-		 *           stored is controlled by the I2C_SLV(0-4)_ADDR, I2C_SLV(0-4)_REG, and I2C_SLV(0-
-		 *           4)_CTRL registers. 
+		 * stored is controlled by the I2C_SLV(0-4)_ADDR, I2C_SLV(0-4)_REG, and I2C_SLV(0-
+		 * 4)_CTRL registers.
 		 */
 		struct EXT_SLV_SENS_DATA_13_
 		{
@@ -2220,7 +2220,7 @@ public:
 	
 	/*
 	 * REG EXT_SLV_SENS_DATA_14:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct EXT_SLV_SENS_DATA_14
 	{
@@ -2229,8 +2229,8 @@ public:
 		/* Bits EXT_SLV_SENS_DATA_14: */
 		/*
 		 * Sensor data read from external I2C devices via the I2C master interface. The data
-		 *           stored is controlled by the I2C_SLV(0-4)_ADDR, I2C_SLV(0-4)_REG, and I2C_SLV(0-
-		 *           4)_CTRL registers. 
+		 * stored is controlled by the I2C_SLV(0-4)_ADDR, I2C_SLV(0-4)_REG, and I2C_SLV(0-
+		 * 4)_CTRL registers.
 		 */
 		struct EXT_SLV_SENS_DATA_14_
 		{
@@ -2260,7 +2260,7 @@ public:
 	
 	/*
 	 * REG EXT_SLV_SENS_DATA_15:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct EXT_SLV_SENS_DATA_15
 	{
@@ -2269,8 +2269,8 @@ public:
 		/* Bits EXT_SLV_SENS_DATA_15: */
 		/*
 		 * Sensor data read from external I2C devices via the I2C master interface. The data
-		 *           stored is controlled by the I2C_SLV(0-4)_ADDR, I2C_SLV(0-4)_REG, and I2C_SLV(0-
-		 *           4)_CTRL registers. 
+		 * stored is controlled by the I2C_SLV(0-4)_ADDR, I2C_SLV(0-4)_REG, and I2C_SLV(0-
+		 * 4)_CTRL registers.
 		 */
 		struct EXT_SLV_SENS_DATA_15_
 		{
@@ -2300,7 +2300,7 @@ public:
 	
 	/*
 	 * REG EXT_SLV_SENS_DATA_16:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct EXT_SLV_SENS_DATA_16
 	{
@@ -2309,8 +2309,8 @@ public:
 		/* Bits EXT_SLV_SENS_DATA_16: */
 		/*
 		 * Sensor data read from external I2C devices via the I2C master interface. The data
-		 *           stored is controlled by the I2C_SLV(0-4)_ADDR, I2C_SLV(0-4)_REG, and I2C_SLV(0-
-		 *           4)_CTRL registers. 
+		 * stored is controlled by the I2C_SLV(0-4)_ADDR, I2C_SLV(0-4)_REG, and I2C_SLV(0-
+		 * 4)_CTRL registers.
 		 */
 		struct EXT_SLV_SENS_DATA_16_
 		{
@@ -2340,7 +2340,7 @@ public:
 	
 	/*
 	 * REG EXT_SLV_SENS_DATA_17:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct EXT_SLV_SENS_DATA_17
 	{
@@ -2349,8 +2349,8 @@ public:
 		/* Bits EXT_SLV_SENS_DATA_17: */
 		/*
 		 * Sensor data read from external I2C devices via the I2C master interface. The data
-		 *           stored is controlled by the I2C_SLV(0-4)_ADDR, I2C_SLV(0-4)_REG, and I2C_SLV(0-
-		 *           4)_CTRL registers. 
+		 * stored is controlled by the I2C_SLV(0-4)_ADDR, I2C_SLV(0-4)_REG, and I2C_SLV(0-
+		 * 4)_CTRL registers.
 		 */
 		struct EXT_SLV_SENS_DATA_17_
 		{
@@ -2380,7 +2380,7 @@ public:
 	
 	/*
 	 * REG EXT_SLV_SENS_DATA_18:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct EXT_SLV_SENS_DATA_18
 	{
@@ -2389,8 +2389,8 @@ public:
 		/* Bits EXT_SLV_SENS_DATA_18: */
 		/*
 		 * Sensor data read from external I2C devices via the I2C master interface. The data
-		 *           stored is controlled by the I2C_SLV(0-4)_ADDR, I2C_SLV(0-4)_REG, and I2C_SLV(0-
-		 *           4)_CTRL registers. 
+		 * stored is controlled by the I2C_SLV(0-4)_ADDR, I2C_SLV(0-4)_REG, and I2C_SLV(0-
+		 * 4)_CTRL registers.
 		 */
 		struct EXT_SLV_SENS_DATA_18_
 		{
@@ -2420,7 +2420,7 @@ public:
 	
 	/*
 	 * REG EXT_SLV_SENS_DATA_19:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct EXT_SLV_SENS_DATA_19
 	{
@@ -2429,8 +2429,8 @@ public:
 		/* Bits EXT_SLV_SENS_DATA_19: */
 		/*
 		 * Sensor data read from external I2C devices via the I2C master interface. The data
-		 *           stored is controlled by the I2C_SLV(0-4)_ADDR, I2C_SLV(0-4)_REG, and I2C_SLV(0-
-		 *           4)_CTRL registers. 
+		 * stored is controlled by the I2C_SLV(0-4)_ADDR, I2C_SLV(0-4)_REG, and I2C_SLV(0-
+		 * 4)_CTRL registers.
 		 */
 		struct EXT_SLV_SENS_DATA_19_
 		{
@@ -2460,7 +2460,7 @@ public:
 	
 	/*
 	 * REG EXT_SLV_SENS_DATA_20:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct EXT_SLV_SENS_DATA_20
 	{
@@ -2469,8 +2469,8 @@ public:
 		/* Bits EXT_SLV_SENS_DATA_20: */
 		/*
 		 * Sensor data read from external I2C devices via the I2C master interface. The data
-		 *           stored is controlled by the I2C_SLV(0-4)_ADDR, I2C_SLV(0-4)_REG, and I2C_SLV(0-
-		 *           4)_CTRL registers. 
+		 * stored is controlled by the I2C_SLV(0-4)_ADDR, I2C_SLV(0-4)_REG, and I2C_SLV(0-
+		 * 4)_CTRL registers.
 		 */
 		struct EXT_SLV_SENS_DATA_20_
 		{
@@ -2500,7 +2500,7 @@ public:
 	
 	/*
 	 * REG EXT_SLV_SENS_DATA_21:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct EXT_SLV_SENS_DATA_21
 	{
@@ -2509,8 +2509,8 @@ public:
 		/* Bits EXT_SLV_SENS_DATA_21: */
 		/*
 		 * Sensor data read from external I2C devices via the I2C master interface. The data
-		 *           stored is controlled by the I2C_SLV(0-4)_ADDR, I2C_SLV(0-4)_REG, and I2C_SLV(0-
-		 *           4)_CTRL registers. 
+		 * stored is controlled by the I2C_SLV(0-4)_ADDR, I2C_SLV(0-4)_REG, and I2C_SLV(0-
+		 * 4)_CTRL registers.
 		 */
 		struct EXT_SLV_SENS_DATA_21_
 		{
@@ -2540,7 +2540,7 @@ public:
 	
 	/*
 	 * REG EXT_SLV_SENS_DATA_22:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct EXT_SLV_SENS_DATA_22
 	{
@@ -2549,8 +2549,8 @@ public:
 		/* Bits EXT_SLV_SENS_DATA_22: */
 		/*
 		 * Sensor data read from external I2C devices via the I2C master interface. The data
-		 *           stored is controlled by the I2C_SLV(0-4)_ADDR, I2C_SLV(0-4)_REG, and I2C_SLV(0-
-		 *           4)_CTRL registers. 
+		 * stored is controlled by the I2C_SLV(0-4)_ADDR, I2C_SLV(0-4)_REG, and I2C_SLV(0-
+		 * 4)_CTRL registers.
 		 */
 		struct EXT_SLV_SENS_DATA_22_
 		{
@@ -2580,7 +2580,7 @@ public:
 	
 	/*
 	 * REG EXT_SLV_SENS_DATA_23:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct EXT_SLV_SENS_DATA_23
 	{
@@ -2589,8 +2589,8 @@ public:
 		/* Bits EXT_SLV_SENS_DATA_23: */
 		/*
 		 * Sensor data read from external I2C devices via the I2C master interface. The data
-		 *           stored is controlled by the I2C_SLV(0-4)_ADDR, I2C_SLV(0-4)_REG, and I2C_SLV(0-
-		 *           4)_CTRL registers. 
+		 * stored is controlled by the I2C_SLV(0-4)_ADDR, I2C_SLV(0-4)_REG, and I2C_SLV(0-
+		 * 4)_CTRL registers.
 		 */
 		struct EXT_SLV_SENS_DATA_23_
 		{
@@ -2620,7 +2620,7 @@ public:
 	
 	/*
 	 * REG FIFO_EN_1:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct FIFO_EN_1
 	{
@@ -2635,8 +2635,8 @@ public:
 		/* Bits SLV_3_FIFO_EN: */
 		/*
 		 * 1 - Write EXT_SENS_DATA registers associated to SLV_3 (as determined by
-		 *           I2C_SLV2_CTRL, I2C_SLV1_CTRL, and I2C_SL20_CTRL)  to the FIFO at the sample rate;
-		 *           0 - Function is disabled. 
+		 * I2C_SLV2_CTRL, I2C_SLV1_CTRL, and I2C_SL20_CTRL)  to the FIFO at the sample rate;
+		 * 0 - Function is disabled.
 		 */
 		struct SLV_3_FIFO_EN
 		{
@@ -2646,8 +2646,8 @@ public:
 		/* Bits SLV_2_FIFO_EN: */
 		/*
 		 * 1 - Write EXT_SENS_DATA registers associated to SLV_2 (as determined by
-		 *           I2C_SLV0_CTRL, I2C_SLV1_CTRL, and I2C_SL20_CTRL)  to the FIFO at the sample rate;
-		 *           0 - Function is disabled. 
+		 * I2C_SLV0_CTRL, I2C_SLV1_CTRL, and I2C_SL20_CTRL)  to the FIFO at the sample rate;
+		 * 0 - Function is disabled.
 		 */
 		struct SLV_2_FIFO_EN
 		{
@@ -2657,8 +2657,8 @@ public:
 		/* Bits SLV_1_FIFO_EN: */
 		/*
 		 * 1 - Write EXT_SENS_DATA registers associated to SLV_1 (as determined by
-		 *           I2C_SLV0_CTRL and I2C_SLV1_CTRL)  to the FIFO at the sample rate;
-		 *           0 - Function is disabled. 
+		 * I2C_SLV0_CTRL and I2C_SLV1_CTRL)  to the FIFO at the sample rate;
+		 * 0 - Function is disabled.
 		 */
 		struct SLV_1_FIFO_EN
 		{
@@ -2668,8 +2668,8 @@ public:
 		/* Bits SLV_0_FIFO_EN: */
 		/*
 		 * 1 - Write EXT_SENS_DATA registers associated to SLV_0 (as determined by
-		 *           I2C_SLV0_CTRL)  to the FIFO at the sample rate;
-		 *           0 - Function is disabled. 
+		 * I2C_SLV0_CTRL)  to the FIFO at the sample rate;
+		 * 0 - Function is disabled.
 		 */
 		struct SLV_0_FIFO_EN
 		{
@@ -2699,7 +2699,7 @@ public:
 	
 	/*
 	 * REG FIFO_EN_2:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct FIFO_EN_2
 	{
@@ -2714,8 +2714,8 @@ public:
 		/* Bits ACCEL_FIFO_EN: */
 		/*
 		 * 1 - Write ACCEL_XOUT_H, ACCEL_XOUT_L, ACCEL_YOUT_H, ACCEL_YOUT_L,
-		 *           ACCEL_ZOUT_H, and ACCEL_ZOUT_L to the FIFO at the sample rate;
-		 *           0 - Function is disabled. 
+		 * ACCEL_ZOUT_H, and ACCEL_ZOUT_L to the FIFO at the sample rate;
+		 * 0 - Function is disabled.
 		 */
 		struct ACCEL_FIFO_EN
 		{
@@ -2725,7 +2725,7 @@ public:
 		/* Bits GYRO_Z_FIFO_EN: */
 		/*
 		 * 1 - Write GYRO_ZOUT_H and GYRO_ZOUT_L to the FIFO at the sample rate.
-		 *           0 - Function is disabled. 
+		 * 0 - Function is disabled.
 		 */
 		struct GYRO_Z_FIFO_EN
 		{
@@ -2735,7 +2735,7 @@ public:
 		/* Bits GYRO_Y_FIFO_EN: */
 		/*
 		 * 1 - Write GYRO_YOUT_H and GYRO_YOUT_L to the FIFO at the sample rate.
-		 *           0 - Function is disabled. 
+		 * 0 - Function is disabled.
 		 */
 		struct GYRO_Y_FIFO_EN
 		{
@@ -2745,7 +2745,7 @@ public:
 		/* Bits GYRO_X_FIFO_EN: */
 		/*
 		 * 1 - Write GYRO_XOUT_H and GYRO_XOUT_L to the FIFO at the sample rate.
-		 *           0 - Function is disabled. 
+		 * 0 - Function is disabled.
 		 */
 		struct GYRO_X_FIFO_EN
 		{
@@ -2755,7 +2755,7 @@ public:
 		/* Bits TEMP_FIFO_EN: */
 		/*
 		 * 1 - Write TEMP_OUT_H and TEMP_OUT_L to the FIFO at the sample rate.
-		 *           0 - Function is disabled. 
+		 * 0 - Function is disabled.
 		 */
 		struct TEMP_FIFO_EN
 		{
@@ -2785,7 +2785,7 @@ public:
 	
 	/*
 	 * REG FIFO_RST:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct FIFO_RST
 	{
@@ -2800,7 +2800,7 @@ public:
 		/* Bits FIFO_RESET: */
 		/*
 		 * S/W FIFO reset.  Assert and hold to set FIFO size to 0. Assert and de-assert to reset
-		 *           FIFO. 
+		 * FIFO.
 		 */
 		struct FIFO_RESET
 		{
@@ -2830,7 +2830,7 @@ public:
 	
 	/*
 	 * REG FIFO_MODE:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct FIFO_MODE
 	{
@@ -2845,10 +2845,10 @@ public:
 		/* Bits FIFO_MODE: */
 		/*
 		 * 0 - Stream.
-		 *           1 - Snapshot.
-		 *           When set to ‘1’, when the FIFO is full, additional writes will not be written to FIFO.
-		 *           When set to ‘0’, when the FIFO is full, additional writes will be written to the FIFO,
-		 *           replacing the oldest data. 
+		 * 1 - Snapshot.
+		 * When set to ‘1’, when the FIFO is full, additional writes will not be written to FIFO.
+		 * When set to ‘0’, when the FIFO is full, additional writes will be written to the FIFO,
+		 * replacing the oldest data.
 		 */
 		struct FIFO_MODE_
 		{
@@ -2878,7 +2878,7 @@ public:
 	
 	/*
 	 * REG FIFO_COUNTH:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct FIFO_COUNTH
 	{
@@ -2893,7 +2893,7 @@ public:
 		/* Bits FIFO_CNT: */
 		/*
 		 * High Bits, count indicates the number of written bytes in the FIFO.
-		 *           Reading this byte latches the data for both FIFO_COUNTH, and FIFO_COUNTL. 
+		 * Reading this byte latches the data for both FIFO_COUNTH, and FIFO_COUNTL.
 		 */
 		struct FIFO_CNT
 		{
@@ -2923,7 +2923,7 @@ public:
 	
 	/*
 	 * REG FIFO_COUNTL:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct FIFO_COUNTL
 	{
@@ -2959,7 +2959,7 @@ public:
 	
 	/*
 	 * REG FIFO_R_W:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct FIFO_R_W
 	{
@@ -2968,9 +2968,9 @@ public:
 		/* Bits FIFO_R_W: */
 		/*
 		 * Reading from or writing to this register actually reads/writes the FIFO. For example,
-		 *           to write a byte to the FIFO, write the desired byte value to FIFO_R_W[7:0]. To read a
-		 *           byte from the FIFO, perform a register read operation and access the result in
-		 *           FIFO_R_W[7:0]. 
+		 * to write a byte to the FIFO, write the desired byte value to FIFO_R_W[7:0]. To read a
+		 * byte from the FIFO, perform a register read operation and access the result in
+		 * FIFO_R_W[7:0].
 		 */
 		struct FIFO_R_W_
 		{
@@ -3000,7 +3000,7 @@ public:
 	
 	/*
 	 * REG DATA_RDY_STATUS:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct DATA_RDY_STATUS
 	{
@@ -3022,8 +3022,8 @@ public:
 		/* Bits RAW_DATA_RDY: */
 		/*
 		 * Data from sensors is copied to FIFO or SRAM.
-		 *           Set when sequence controller kicks off on a sensor data load. Only bit 0 is relevant in
-		 *           a single FIFO configuration. Cleared on read. 
+		 * Set when sequence controller kicks off on a sensor data load. Only bit 0 is relevant in
+		 * a single FIFO configuration. Cleared on read.
 		 */
 		struct RAW_DATA_RDY
 		{
@@ -3053,7 +3053,7 @@ public:
 	
 	/*
 	 * REG FIFO_CFG:
-	 * type USR0, bank 0 
+	 * type USR0, bank 0
 	 */
 	struct FIFO_CFG
 	{
@@ -3095,7 +3095,7 @@ public:
 	
 	/*
 	 * REG REG_BANK_SEL:
-	 * type ALL, bank 0 
+	 * type ALL, bank 0
 	 */
 	struct REG_BANK_SEL
 	{
@@ -3110,10 +3110,10 @@ public:
 		/* Bits USER_BANK: */
 		/*
 		 * Use the following values in this bit-field to select a USER BANK.
-		 *           0: Select USER BANK 0.
-		 *           1: Select USER BANK 1.
-		 *           2: Select USER BANK 2.
-		 *           3: Select USER BANK 3. 
+		 * 0: Select USER BANK 0.
+		 * 1: Select USER BANK 1.
+		 * 2: Select USER BANK 2.
+		 * 3: Select USER BANK 3.
 		 */
 		struct USER_BANK
 		{
