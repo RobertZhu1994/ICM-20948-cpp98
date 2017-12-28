@@ -30,7 +30,7 @@ public:
 	
 	/*
 	 * REG GYRO_SMPLRT_DIV:
-	 * type USR2, bank 2 
+	 * type USR2, bank 2
 	 */
 	struct GYRO_SMPLRT_DIV
 	{
@@ -39,11 +39,11 @@ public:
 		/* Bits GYRO_SMPLRT_DIV: */
 		/*
 		 * Gyro sample rate divider. Divides the internal sample rate to generate the sample
-		 *           rate that controls sensor data output rate, FIFO sample rate, and DMP sequence rate.
-		 *           NOTE: This register is only effective when FCHOICE = 1’b1 (FCHOICE_B register bit is 1’b0), and
-		 *           (0 < DLPF_CFG < 7).
-		 *           ODR is computed as follows:
-		 *           1.1 kHz/(1+GYRO_SMPLRT_DIV[7:0]) 
+		 * rate that controls sensor data output rate, FIFO sample rate, and DMP sequence rate.
+		 * NOTE: This register is only effective when FCHOICE = 1’b1 (FCHOICE_B register bit is 1’b0), and
+		 * (0 < DLPF_CFG < 7).
+		 * ODR is computed as follows:
+		 * 1.1 kHz/(1+GYRO_SMPLRT_DIV[7:0])
 		 */
 		struct GYRO_SMPLRT_DIV_
 		{
@@ -73,9 +73,9 @@ public:
 	
 	/*
 	 * REG GYRO_CONFIG_1:
-	 * type USR2, bank 2 
+	 * type USR2, bank 2
 	 * The gyroscope DLPF is configured by GYRO_DLPFCFG, when GYRO_FCHOICE = 1. The gyroscope data is filtered
-	 * according to the value of GYRO_DLPFCFG and GYRO_FCHOICE as shown in Table 16. 
+	 * according to the value of GYRO_DLPFCFG and GYRO_FCHOICE as shown in Table 16.
 	 */
 	struct GYRO_CONFIG_1
 	{
@@ -97,10 +97,10 @@ public:
 		/* Bits GYRO_FS_SEL: */
 		/*
 		 * Gyro Full Scale Select:
-		 *           00 = ±250 dps
-		 *           01= ±500 dps
-		 *           10 = ±1000 dps
-		 *           11 = ±2000 dps 
+		 * 00 = ±250 dps
+		 * 01= ±500 dps
+		 * 10 = ±1000 dps
+		 * 11 = ±2000 dps
 		 */
 		struct GYRO_FS_SEL
 		{
@@ -110,7 +110,7 @@ public:
 		/* Bits GYRO_FCHOICE: */
 		/*
 		 * 0 - Bypass gyro DLPF.
-		 *           1 - Enable gyro DLPF. 
+		 * 1 - Enable gyro DLPF.
 		 */
 		struct GYRO_FCHOICE
 		{
@@ -140,7 +140,7 @@ public:
 	
 	/*
 	 * REG GYRO_CONFIG_2:
-	 * type USR2, bank 2 
+	 * type USR2, bank 2
 	 */
 	struct GYRO_CONFIG_2
 	{
@@ -176,14 +176,14 @@ public:
 		/* Bits GYRO_AVGCFG: */
 		/*
 		 * Averaging filter configuration settings for low-power mode.
-		 *           0: 1x averaging.
-		 *           1: 2x averaging.
-		 *           2: 4x averaging.
-		 *           3: 8x averaging.
-		 *           4: 16x averaging.
-		 *           5: 32x averaging.
-		 *           6: 64x averaging.
-		 *           7: 128x averaging. 
+		 * 0: 1x averaging.
+		 * 1: 2x averaging.
+		 * 2: 4x averaging.
+		 * 3: 8x averaging.
+		 * 4: 16x averaging.
+		 * 5: 32x averaging.
+		 * 6: 64x averaging.
+		 * 7: 128x averaging.
 		 */
 		struct GYRO_AVGCFG
 		{
@@ -213,7 +213,7 @@ public:
 	
 	/*
 	 * REG XG_OFFS_USRH:
-	 * type USR2, bank 2 
+	 * type USR2, bank 2
 	 */
 	struct XG_OFFS_USRH
 	{
@@ -249,7 +249,7 @@ public:
 	
 	/*
 	 * REG XG_OFFS_USRL:
-	 * type USR2, bank 2 
+	 * type USR2, bank 2
 	 */
 	struct XG_OFFS_USRL
 	{
@@ -285,7 +285,7 @@ public:
 	
 	/*
 	 * REG YG_OFFS_USRH:
-	 * type USR2, bank 2 
+	 * type USR2, bank 2
 	 */
 	struct YG_OFFS_USRH
 	{
@@ -321,7 +321,7 @@ public:
 	
 	/*
 	 * REG YG_OFFS_USRL:
-	 * type USR2, bank 2 
+	 * type USR2, bank 2
 	 */
 	struct YG_OFFS_USRL
 	{
@@ -357,7 +357,7 @@ public:
 	
 	/*
 	 * REG ZG_OFFS_USRH:
-	 * type USR2, bank 2 
+	 * type USR2, bank 2
 	 */
 	struct ZG_OFFS_USRH
 	{
@@ -393,7 +393,7 @@ public:
 	
 	/*
 	 * REG ZG_OFFS_USRL:
-	 * type USR2, bank 2 
+	 * type USR2, bank 2
 	 */
 	struct ZG_OFFS_USRL
 	{
@@ -429,7 +429,7 @@ public:
 	
 	/*
 	 * REG ODR_ALIGN_EN:
-	 * type USR2, bank 2, OTP No 
+	 * type USR2, bank 2, OTP No
 	 */
 	struct ODR_ALIGN_EN
 	{
@@ -444,9 +444,9 @@ public:
 		/* Bits ODR_ALIGN_EN: */
 		/*
 		 * 0: Disables ODR start-time alignment.
-		 *           1: Enables ODR start-time alignment when any of the following registers is written
-		 *           (with the same value or with different values):  GYRO_SMPLRT_DIV,
-		 *           ACCEL_SMPLRT_DIV_1, ACCEL_SMPLRT_DIV_2, I2C_MST_ODR_CONFIG. 
+		 * 1: Enables ODR start-time alignment when any of the following registers is written
+		 * (with the same value or with different values):  GYRO_SMPLRT_DIV,
+		 * ACCEL_SMPLRT_DIV_1, ACCEL_SMPLRT_DIV_2, I2C_MST_ODR_CONFIG.
 		 */
 		struct ODR_ALIGN_EN_
 		{
@@ -476,7 +476,7 @@ public:
 	
 	/*
 	 * REG ACCEL_SMPLRT_DIV_1:
-	 * type USR2, bank 2 
+	 * type USR2, bank 2
 	 */
 	struct ACCEL_SMPLRT_DIV_1
 	{
@@ -518,7 +518,7 @@ public:
 	
 	/*
 	 * REG ACCEL_SMPLRT_DIV_2:
-	 * type USR2, bank 2 
+	 * type USR2, bank 2
 	 */
 	struct ACCEL_SMPLRT_DIV_2
 	{
@@ -527,8 +527,8 @@ public:
 		/* Bits ACCEL_SMPLRT_DIV: */
 		/*
 		 * LSB for ACCEL sample rate div.
-		 *           ODR is computed as follows:
-		 *           1.125 kHz/(1+ACCEL_SMPLRT_DIV[11:0]) 
+		 * ODR is computed as follows:
+		 * 1.125 kHz/(1+ACCEL_SMPLRT_DIV[11:0])
 		 */
 		struct ACCEL_SMPLRT_DIV
 		{
@@ -558,7 +558,7 @@ public:
 	
 	/*
 	 * REG ACCEL_INTEL_CTRL:
-	 * type USR2, bank 2 
+	 * type USR2, bank 2
 	 */
 	struct ACCEL_INTEL_CTRL
 	{
@@ -580,8 +580,8 @@ public:
 		/* Bits ACCEL_INTEL_MODE_INT: */
 		/*
 		 * Selects WOM algorithm.
-		 *           1 = Compare the current sample with the previous sample.
-		 *           0 = Initial sample is stored, all future samples are compared to the initial sample. 
+		 * 1 = Compare the current sample with the previous sample.
+		 * 0 = Initial sample is stored, all future samples are compared to the initial sample.
 		 */
 		struct ACCEL_INTEL_MODE_INT
 		{
@@ -611,7 +611,7 @@ public:
 	
 	/*
 	 * REG ACCEL_WOM_THR:
-	 * type USR2, bank 2 
+	 * type USR2, bank 2
 	 */
 	struct ACCEL_WOM_THR
 	{
@@ -620,7 +620,7 @@ public:
 		/* Bits WOM_THRESHOLD: */
 		/*
 		 * This register holds the threshold value for the Wake on Motion Interrupt for ACCEL
-		 *           x/y/z axes. LSB = 4 mg. Range is 0 mg to 1020 mg. 
+		 * x/y/z axes. LSB = 4 mg. Range is 0 mg to 1020 mg.
 		 */
 		struct WOM_THRESHOLD
 		{
@@ -650,9 +650,9 @@ public:
 	
 	/*
 	 * REG ACCEL_CONFIG:
-	 * type USR2, bank 2 
+	 * type USR2, bank 2
 	 * The data rate out of the DLPF filter block can be further reduced by a factor of
-	 * 1.125 kHz/(1+ACCEL_SMPLRT_DIV[11:0]) where ACCEL_SMPLRT_DIV is a 12-bit integer. 
+	 * 1.125 kHz/(1+ACCEL_SMPLRT_DIV[11:0]) where ACCEL_SMPLRT_DIV is a 12-bit integer.
 	 */
 	struct ACCEL_CONFIG
 	{
@@ -674,10 +674,10 @@ public:
 		/* Bits ACCEL_FS_SEL: */
 		/*
 		 * Accelerometer Full Scale Select:
-		 *           00: ±2g
-		 *           01: ±4g
-		 *           10: ±8g
-		 *           11: ±16g 
+		 * 00: ±2g
+		 * 01: ±4g
+		 * 10: ±8g
+		 * 11: ±16g
 		 */
 		struct ACCEL_FS_SEL
 		{
@@ -687,7 +687,7 @@ public:
 		/* Bits ACCEL_FCHOICE: */
 		/*
 		 * 0: Bypass accel DLPF.
-		 *           1: Enable accel DLPF. 
+		 * 1: Enable accel DLPF.
 		 */
 		struct ACCEL_FCHOICE
 		{
@@ -717,7 +717,7 @@ public:
 	
 	/*
 	 * REG ACCEL_CONFIG_2:
-	 * type USR2, bank 2 
+	 * type USR2, bank 2
 	 */
 	struct ACCEL_CONFIG_2
 	{
@@ -753,10 +753,10 @@ public:
 		/* Bits DEC3_CFG: */
 		/*
 		 * Controls the number of samples averaged in the accelerometer decimator:
-		 *           0: Average 1 or 4 samples depending on ACCEL_FCHOICE (see Table 19).
-		 *           1: Average 8 samples.
-		 *           2: Average 16 samples.
-		 *           3: Average 32 samples. 
+		 * 0: Average 1 or 4 samples depending on ACCEL_FCHOICE (see Table 19).
+		 * 1: Average 8 samples.
+		 * 2: Average 16 samples.
+		 * 3: Average 32 samples.
 		 */
 		struct DEC3_CFG
 		{
@@ -786,7 +786,7 @@ public:
 	
 	/*
 	 * REG FSYNC_CONFIG:
-	 * type USR2, bank 2 
+	 * type USR2, bank 2
 	 */
 	struct FSYNC_CONFIG
 	{
@@ -795,9 +795,9 @@ public:
 		/* Bits DELAY_TIME_EN: */
 		/*
 		 * 0: Disables delay time measurement between FSYNC event and the first ODR event
-		 *           (after FSYNC event).
-		 *           1: Enables delay time measurement between FSYNC event and the first ODR event
-		 *           (after FSYNC event). 
+		 * (after FSYNC event).
+		 * 1: Enables delay time measurement between FSYNC event and the first ODR event
+		 * (after FSYNC event).
 		 */
 		struct DELAY_TIME_EN
 		{
@@ -820,8 +820,8 @@ public:
 		/* Bits WOF_EDGE_INT: */
 		/*
 		 * 0: FSYNC is a level interrupt for Wake on FSYNC.
-		 *           1: FSYNC is an edge interrupt for Wake on FSYNC.
-		 *           ACTL_FSYNC is used to set the polarity of the interrupt. 
+		 * 1: FSYNC is an edge interrupt for Wake on FSYNC.
+		 * ACTL_FSYNC is used to set the polarity of the interrupt.
 		 */
 		struct WOF_EDGE_INT
 		{
@@ -831,15 +831,15 @@ public:
 		/* Bits EXT_SYNC_SET: */
 		/*
 		 * Enables the FSYNC pin data to be sampled.
-		 *           EXT_SYNC_SET FSYNC bit location.
-		 *           0: Function disabled.
-		 *           1: TEMP_OUT_L[0].
-		 *           2: GYRO_XOUT_L[0].
-		 *           3: GYRO_YOUT_L[0].
-		 *           4: GYRO_ZOUT_L[0].
-		 *           5: ACCEL_XOUT_L[0].
-		 *           6: ACCEL_YOUT_L[0].
-		 *           7: ACCEL_ZOUT_L[0]. 
+		 * EXT_SYNC_SET FSYNC bit location.
+		 * 0: Function disabled.
+		 * 1: TEMP_OUT_L[0].
+		 * 2: GYRO_XOUT_L[0].
+		 * 3: GYRO_YOUT_L[0].
+		 * 4: GYRO_ZOUT_L[0].
+		 * 5: ACCEL_XOUT_L[0].
+		 * 6: ACCEL_YOUT_L[0].
+		 * 7: ACCEL_ZOUT_L[0].
 		 */
 		struct EXT_SYNC_SET
 		{
@@ -869,7 +869,7 @@ public:
 	
 	/*
 	 * REG TEMP_CONFIG:
-	 * type USR2, bank 2 
+	 * type USR2, bank 2
 	 */
 	struct TEMP_CONFIG
 	{
@@ -878,16 +878,16 @@ public:
 		/* Bits TEMP_DLPFCFG: */
 		/*
 		 * Low pass filter configuration for temperature sensor as shown in the table below:
-		 *           TEMP_DLPCFG<2:0> TEMP SENSOR
-		 *           NBW (HZ) RATE (KHZ)
-		 *           0 7932 9
-		 *           1 217.9 1.125
-		 *           2 123.5 1.125
-		 *           3 65.9 1.125
-		 *           4 34.1 1.125
-		 *           5 17.3 1.125
-		 *           6 8.8 Rate (kHz)
-		 *           7 7932 9 
+		 * TEMP_DLPCFG<2:0> TEMP SENSOR
+		 * NBW (HZ) RATE (KHZ)
+		 * 0 7932 9
+		 * 1 217.9 1.125
+		 * 2 123.5 1.125
+		 * 3 65.9 1.125
+		 * 4 34.1 1.125
+		 * 5 17.3 1.125
+		 * 6 8.8 Rate (kHz)
+		 * 7 7932 9
 		 */
 		struct TEMP_DLPFCFG
 		{
@@ -917,7 +917,7 @@ public:
 	
 	/*
 	 * REG MOD_CTRL_USR:
-	 * type USR2, bank 2 
+	 * type USR2, bank 2
 	 */
 	struct MOD_CTRL_USR
 	{
@@ -959,7 +959,7 @@ public:
 	
 	/*
 	 * REG REG_BANK_SEL:
-	 * type USR2, bank 2 
+	 * type USR2, bank 2
 	 */
 	struct REG_BANK_SEL
 	{
@@ -974,10 +974,10 @@ public:
 		/* Bits USER_BANK: */
 		/*
 		 * Use the following values in this bit-field to select a USER BANK.
-		 *           0: Select USER BANK 0.
-		 *           1: Select USER BANK 1.
-		 *           2: Select USER BANK 2.
-		 *           3: Select USER BANK 3. 
+		 * 0: Select USER BANK 0.
+		 * 1: Select USER BANK 1.
+		 * 2: Select USER BANK 2.
+		 * 3: Select USER BANK 3.
 		 */
 		struct USER_BANK
 		{
