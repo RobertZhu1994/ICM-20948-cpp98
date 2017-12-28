@@ -30,7 +30,7 @@ public:
 	
 	/*
 	 * REG SELF_TEST_X_GYRO:
-	 * type USR1, bank 1 
+	 * type USR1, bank 1
 	 */
 	struct SELF_TEST_X_GYRO
 	{
@@ -39,8 +39,8 @@ public:
 		/* Bits XG_ST_DATA: */
 		/*
 		 * The value in this register indicates the self-test output generated during
-		 *           manufacturing tests. This value is to be used to check against subsequent self-test
-		 *           outputs performed by the end user. 
+		 * manufacturing tests. This value is to be used to check against subsequent self-test
+		 * outputs performed by the end user.
 		 */
 		struct XG_ST_DATA
 		{
@@ -70,7 +70,7 @@ public:
 	
 	/*
 	 * REG SELF_TEST_Y_GYRO:
-	 * type USR1, bank 1 
+	 * type USR1, bank 1
 	 */
 	struct SELF_TEST_Y_GYRO
 	{
@@ -79,8 +79,8 @@ public:
 		/* Bits YG_ST_DATA: */
 		/*
 		 * The value in this register indicates the self-test output generated during
-		 *           manufacturing tests. This value is to be used to check against subsequent self-test
-		 *           outputs performed by the end user. 
+		 * manufacturing tests. This value is to be used to check against subsequent self-test
+		 * outputs performed by the end user.
 		 */
 		struct YG_ST_DATA
 		{
@@ -110,7 +110,7 @@ public:
 	
 	/*
 	 * REG SELF_TEST_Z_GYRO:
-	 * type USR1, bank 1 
+	 * type USR1, bank 1
 	 */
 	struct SELF_TEST_Z_GYRO
 	{
@@ -119,8 +119,8 @@ public:
 		/* Bits ZG_ST_DATA: */
 		/*
 		 * The value in this register indicates the self-test output generated during
-		 *           manufacturing tests. This value is to be used to check against subsequent self-test
-		 *           outputs performed by the end user. 
+		 * manufacturing tests. This value is to be used to check against subsequent self-test
+		 * outputs performed by the end user.
 		 */
 		struct ZG_ST_DATA
 		{
@@ -150,7 +150,7 @@ public:
 	
 	/*
 	 * REG SELF_TEST_X_ACCEL:
-	 * type USR1, bank 1 
+	 * type USR1, bank 1
 	 */
 	struct SELF_TEST_X_ACCEL
 	{
@@ -186,7 +186,7 @@ public:
 	
 	/*
 	 * REG SELF_TEST_Y_ACCEL:
-	 * type USR1, bank 1 
+	 * type USR1, bank 1
 	 */
 	struct SELF_TEST_Y_ACCEL
 	{
@@ -222,7 +222,7 @@ public:
 	
 	/*
 	 * REG SELF_TEST_Z_ACCEL:
-	 * type USR1, bank 1 
+	 * type USR1, bank 1
 	 */
 	struct SELF_TEST_Z_ACCEL
 	{
@@ -258,7 +258,7 @@ public:
 	
 	/*
 	 * REG XA_OFFS_H:
-	 * type USR1, bank 1 
+	 * type USR1, bank 1
 	 */
 	struct XA_OFFS_H
 	{
@@ -293,7 +293,7 @@ public:
 	
 	/*
 	 * REG XA_OFFS_L:
-	 * type USR1, bank 1 
+	 * type USR1, bank 1
 	 */
 	struct XA_OFFS_L
 	{
@@ -333,7 +333,7 @@ public:
 	
 	/*
 	 * REG YA_OFFS_H:
-	 * type USR1, bank 1 
+	 * type USR1, bank 1
 	 */
 	struct YA_OFFS_H
 	{
@@ -368,7 +368,7 @@ public:
 	
 	/*
 	 * REG YA_OFFS_L:
-	 * type USR1, bank 1 
+	 * type USR1, bank 1
 	 */
 	struct YA_OFFS_L
 	{
@@ -408,7 +408,7 @@ public:
 	
 	/*
 	 * REG ZA_OFFS_H:
-	 * type USR1, bank 1 
+	 * type USR1, bank 1
 	 */
 	struct ZA_OFFS_H
 	{
@@ -443,7 +443,7 @@ public:
 	
 	/*
 	 * REG ZA_OFFS_L:
-	 * type USR1, bank 1 
+	 * type USR1, bank 1
 	 */
 	struct ZA_OFFS_L
 	{
@@ -483,7 +483,7 @@ public:
 	
 	/*
 	 * REG TIMEBASE_CORRECTION_PLL:
-	 * type USR1, bank 1 
+	 * type USR1, bank 1
 	 */
 	struct TIMEBASE_CORRECTION_PLL
 	{
@@ -519,7 +519,7 @@ public:
 	
 	/*
 	 * REG REG_BANK_SEL:
-	 * type , bank 1 
+	 * type , bank 1
 	 */
 	struct REG_BANK_SEL
 	{
@@ -534,10 +534,10 @@ public:
 		/* Bits USER_BANK: */
 		/*
 		 * Use the following values in this bit-field to select a USER BANK.
-		 *           0: Select USER BANK 0.
-		 *           1: Select USER BANK 1.
-		 *           2: Select USER BANK 2.
-		 *           3: Select USER BANK 3. 
+		 * 0: Select USER BANK 0.
+		 * 1: Select USER BANK 1.
+		 * 2: Select USER BANK 2.
+		 * 3: Select USER BANK 3.
 		 */
 		struct USER_BANK
 		{
