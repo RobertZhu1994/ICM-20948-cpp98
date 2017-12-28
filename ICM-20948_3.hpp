@@ -30,7 +30,7 @@ public:
 	
 	/*
 	 * REG I2C_MST_ODR_CONFIG:
-	 * type USR3, bank 3 
+	 * type USR3, bank 3
 	 */
 	struct I2C_MST_ODR_CONFIG
 	{
@@ -45,11 +45,11 @@ public:
 		/* Bits I2C_MST_ODR_CONFIG: */
 		/*
 		 * ODR configuration for external sensor when gyroscope and accelerometer are
-		 *           disabled.  ODR is computed as follows:
-		 *           1.1 kHz/(2^((odr_config[3:0])) )
-		 *           When gyroscope is enabled, all sensors (including I2C_MASTER) use the gyroscope
-		 *           ODR. If gyroscope is disabled, then all sensors (including I2C_MASTER) use the
-		 *           accelerometer ODR. 
+		 * disabled.  ODR is computed as follows:
+		 * 1.1 kHz/(2^((odr_config[3:0])) )
+		 * When gyroscope is enabled, all sensors (including I2C_MASTER) use the gyroscope
+		 * ODR. If gyroscope is disabled, then all sensors (including I2C_MASTER) use the
+		 * accelerometer ODR.
 		 */
 		struct I2C_MST_ODR_CONFIG_
 		{
@@ -79,7 +79,7 @@ public:
 	
 	/*
 	 * REG I2C_MST_CTRL:
-	 * type USR3, bank 3 
+	 * type USR3, bank 3
 	 */
 	struct I2C_MST_CTRL
 	{
@@ -88,7 +88,7 @@ public:
 		/* Bits MULT_MST_EN: */
 		/*
 		 * Enables multi-master capability. When disabled, clocking to the I2C_MST_IF can be
-		 *           disabled when not in use and the logic to detect lost arbitration is disabled. 
+		 * disabled when not in use and the logic to detect lost arbitration is disabled.
 		 */
 		struct MULT_MST_EN
 		{
@@ -104,9 +104,9 @@ public:
 		/* Bits I2C_MST_P_NSR: */
 		/*
 		 * This bit controls the I2C Master’s transition from one slave read to the next slave
-		 *           read.
-		 *           0 - There is a restart between reads.
-		 *           1 - There is a stop between reads. 
+		 * read.
+		 * 0 - There is a restart between reads.
+		 * 1 - There is a stop between reads.
 		 */
 		struct I2C_MST_P_NSR
 		{
@@ -143,7 +143,7 @@ public:
 	
 	/*
 	 * REG I2C_MST_DELAY_CTRL:
-	 * type USR3, bank 3 
+	 * type USR3, bank 3
 	 */
 	struct I2C_MST_DELAY_CTRL
 	{
@@ -165,7 +165,7 @@ public:
 		/* Bits I2C_SLV4_DELAY_EN: */
 		/*
 		 * When enabled, slave 4 will only be accessed 1/(1+I2C_SLC4_DLY) samples as
-		 *           determined by I2C_MST_ODR_CONFIG. 
+		 * determined by I2C_MST_ODR_CONFIG.
 		 */
 		struct I2C_SLV4_DELAY_EN
 		{
@@ -175,7 +175,7 @@ public:
 		/* Bits I2C_SLV3_DELAY_EN: */
 		/*
 		 * When enabled, slave 3 will only be accessed 1/(1+I2C_SLC4_DLY) samples as
-		 *           determined by I2C_MST_ODR_CONFIG. 
+		 * determined by I2C_MST_ODR_CONFIG.
 		 */
 		struct I2C_SLV3_DELAY_EN
 		{
@@ -185,7 +185,7 @@ public:
 		/* Bits I2C_SLV2_DELAY_EN: */
 		/*
 		 * When enabled, slave 2 will only be accessed 1/(1+I2C_SLC4_DLY) samples as
-		 *           determined by I2C_MST_ODR_CONFIG. 
+		 * determined by I2C_MST_ODR_CONFIG.
 		 */
 		struct I2C_SLV2_DELAY_EN
 		{
@@ -195,7 +195,7 @@ public:
 		/* Bits I2C_SLV1_DELAY_EN: */
 		/*
 		 * When enabled, slave 1 will only be accessed 1/(1+I2C_SLC4_DLY) samples as
-		 *           determined by I2C_MST_ODR_CONFIG. 
+		 * determined by I2C_MST_ODR_CONFIG.
 		 */
 		struct I2C_SLV1_DELAY_EN
 		{
@@ -205,7 +205,7 @@ public:
 		/* Bits I2C_SLV0_DELAY_EN: */
 		/*
 		 * When enabled, slave 0 will only be accessed 1/(1+I2C_SLC4_DLY) samples as
-		 *           determined by I2C_MST_ODR_CONFIG. 
+		 * determined by I2C_MST_ODR_CONFIG.
 		 */
 		struct I2C_SLV0_DELAY_EN
 		{
@@ -235,7 +235,7 @@ public:
 	
 	/*
 	 * REG I2C_SLV0_ADDR:
-	 * type USR3, bank 3 
+	 * type USR3, bank 3
 	 */
 	struct I2C_SLV0_ADDR
 	{
@@ -244,7 +244,7 @@ public:
 		/* Bits I2C_SLV0_RNW: */
 		/*
 		 * 1 - Transfer is a read.
-		 *           0 - Transfer is a write. 
+		 * 0 - Transfer is a write.
 		 */
 		struct I2C_SLV0_RNW
 		{
@@ -281,7 +281,7 @@ public:
 	
 	/*
 	 * REG I2C_SLV0_REG:
-	 * type USR3, bank 3 
+	 * type USR3, bank 3
 	 */
 	struct I2C_SLV0_REG
 	{
@@ -317,7 +317,7 @@ public:
 	
 	/*
 	 * REG I2C_SLV0_CTRL:
-	 * type USR3, bank 3 
+	 * type USR3, bank 3
 	 */
 	struct I2C_SLV0_CTRL
 	{
@@ -326,8 +326,8 @@ public:
 		/* Bits I2C_SLV0_EN: */
 		/*
 		 * 1 - Enable reading data from this slave at the sample rate and storing data at the first
-		 *           available EXT_SENS_DATA register, which is always EXT_SENS_DATA_00 for I2C slave 0.
-		 *           0 - Function is disabled for this slave. 
+		 * available EXT_SENS_DATA register, which is always EXT_SENS_DATA_00 for I2C slave 0.
+		 * 0 - Function is disabled for this slave.
 		 */
 		struct I2C_SLV0_EN
 		{
@@ -337,15 +337,15 @@ public:
 		/* Bits I2C_SLV0_BYTE_SW: */
 		/*
 		 * 1 - Swap bytes when reading both the low and high byte of a word. Note there is
-		 *           nothing to swap after reading the first byte if I2C_SLV0_REG[0] = 1, or if the last byte
-		 *           read has a register address lsb = 0.
-		 *           For example, if I2C_SLV0_REG = 0x1, and I2C_SLV0_LENG = 0x4:
-		 *           1) The first byte read from address 0x1 will be stored at EXT_SENS_DATA_00,
-		 *           2) the second and third bytes will be read and swapped, so the data read from address
-		 *           0x2 will be stored at EXT_SENS_DATA_02, and the data read from address 0x3 will be
-		 *           stored at EXT_SENS_DATA_01,
-		 *           3) The last byte read from address 0x4 will be stored at EXT_SENS_DATA_03.
-		 *           0 - No swapping occurs; bytes are written in order read. 
+		 * nothing to swap after reading the first byte if I2C_SLV0_REG[0] = 1, or if the last byte
+		 * read has a register address lsb = 0.
+		 * For example, if I2C_SLV0_REG = 0x1, and I2C_SLV0_LENG = 0x4:
+		 * 1) The first byte read from address 0x1 will be stored at EXT_SENS_DATA_00,
+		 * 2) the second and third bytes will be read and swapped, so the data read from address
+		 * 0x2 will be stored at EXT_SENS_DATA_02, and the data read from address 0x3 will be
+		 * stored at EXT_SENS_DATA_01,
+		 * 3) The last byte read from address 0x4 will be stored at EXT_SENS_DATA_03.
+		 * 0 - No swapping occurs; bytes are written in order read.
 		 */
 		struct I2C_SLV0_BYTE_SW
 		{
@@ -355,7 +355,7 @@ public:
 		/* Bits I2C_SLV0_REG_DIS: */
 		/*
 		 * When set, the transaction does not write a register value, it will only read data, or write
-		 *           data. 
+		 * data.
 		 */
 		struct I2C_SLV0_REG_DIS
 		{
@@ -365,12 +365,12 @@ public:
 		/* Bits I2C_SLV0_GRP: */
 		/*
 		 * External sensor data typically comes in as groups of two bytes. This bit is used to
-		 *           determine if the groups are from the slave’s register address 0 and 1, 2 and 3, etc.., or if
-		 *           the groups are address 1 and 2, 3 and 4, etc.
-		 *           0 indicates slave register addresses 0 and 1 are grouped together (odd numbered
-		 *           register ends the group). 1 indicates slave register addresses 1 and 2 are grouped
-		 *           together (even numbered register ends the group). This allows byte swapping of
-		 *           registers that are grouped starting at any address. 
+		 * determine if the groups are from the slave’s register address 0 and 1, 2 and 3, etc.., or if
+		 * the groups are address 1 and 2, 3 and 4, etc.
+		 * 0 indicates slave register addresses 0 and 1 are grouped together (odd numbered
+		 * register ends the group). 1 indicates slave register addresses 1 and 2 are grouped
+		 * together (even numbered register ends the group). This allows byte swapping of
+		 * registers that are grouped starting at any address.
 		 */
 		struct I2C_SLV0_GRP
 		{
@@ -407,7 +407,7 @@ public:
 	
 	/*
 	 * REG I2C_SLV0_DO:
-	 * type USR3, bank 3 
+	 * type USR3, bank 3
 	 */
 	struct I2C_SLV0_DO
 	{
@@ -443,7 +443,7 @@ public:
 	
 	/*
 	 * REG I2C_SLV1_ADDR:
-	 * type USR3, bank 3 
+	 * type USR3, bank 3
 	 */
 	struct I2C_SLV1_ADDR
 	{
@@ -452,7 +452,7 @@ public:
 		/* Bits I2C_SLV1_RNW: */
 		/*
 		 * 1 - Transfer is a read.
-		 *           0 - Transfer is a write. 
+		 * 0 - Transfer is a write.
 		 */
 		struct I2C_SLV1_RNW
 		{
@@ -489,7 +489,7 @@ public:
 	
 	/*
 	 * REG I2C_SLV1_REG:
-	 * type USR3, bank 3 
+	 * type USR3, bank 3
 	 */
 	struct I2C_SLV1_REG
 	{
@@ -525,7 +525,7 @@ public:
 	
 	/*
 	 * REG I2C_SLV1_CTRL:
-	 * type USR3, bank 3 
+	 * type USR3, bank 3
 	 */
 	struct I2C_SLV1_CTRL
 	{
@@ -534,9 +534,9 @@ public:
 		/* Bits I2C_SLV1_EN: */
 		/*
 		 * 1 - Enable reading data from this slave at the sample rate and storing data at the first
-		 *           available EXT_SENS_DATA register as determined by I2C_SLV0_EN and
-		 *           I2C_SLV0_LENG.
-		 *           0 - Function is disabled for this slave. 
+		 * available EXT_SENS_DATA register as determined by I2C_SLV0_EN and
+		 * I2C_SLV0_LENG.
+		 * 0 - Function is disabled for this slave.
 		 */
 		struct I2C_SLV1_EN
 		{
@@ -546,19 +546,19 @@ public:
 		/* Bits I2C_SLV1_BYTE_SW: */
 		/*
 		 * 1 - Swap bytes when reading both the low and high byte of a word. Note there is
-		 *           nothing to swap after reading the first byte if I2C_SLV1_REG[0] = 1, or if the last byte
-		 *           read has a register address lsb = 0.
-		 *           For example, if I2C_SLV0_EN = 0x1, and I2C_SLV0_LENG = 0x3 (to show swap has to
-		 *           do with I2C slave address not EXT_SENS_DATA address), and if I2C_SLV1_REG = 0x1,
-		 *           and I2C_SLV1_LENG = 0x4:
-		 *           1) The first byte read from address 0x1 will be stored at EXT_SENS_DATA_03 (slave
-		 *           0’s data will be in EXT_SENS_DATA_00, EXT_SENS_DATA_01, and
-		 *           EXT_SENS_DATA_02),
-		 *           2) the second and third bytes will be read and swapped, so the data read from
-		 *           address 0x2 will be stored at EXT_SENS_DATA_04, and the data read from address
-		 *           0x3 will be stored at EXT_SENS_DATA_05,
-		 *           3) The last byte read from address 0x4 will be stored at EXT_SENS_DATA_06.
-		 *           0 - No swapping occurs, bytes are written in order read. 
+		 * nothing to swap after reading the first byte if I2C_SLV1_REG[0] = 1, or if the last byte
+		 * read has a register address lsb = 0.
+		 * For example, if I2C_SLV0_EN = 0x1, and I2C_SLV0_LENG = 0x3 (to show swap has to
+		 * do with I2C slave address not EXT_SENS_DATA address), and if I2C_SLV1_REG = 0x1,
+		 * and I2C_SLV1_LENG = 0x4:
+		 * 1) The first byte read from address 0x1 will be stored at EXT_SENS_DATA_03 (slave
+		 * 0’s data will be in EXT_SENS_DATA_00, EXT_SENS_DATA_01, and
+		 * EXT_SENS_DATA_02),
+		 * 2) the second and third bytes will be read and swapped, so the data read from
+		 * address 0x2 will be stored at EXT_SENS_DATA_04, and the data read from address
+		 * 0x3 will be stored at EXT_SENS_DATA_05,
+		 * 3) The last byte read from address 0x4 will be stored at EXT_SENS_DATA_06.
+		 * 0 - No swapping occurs, bytes are written in order read.
 		 */
 		struct I2C_SLV1_BYTE_SW
 		{
@@ -568,7 +568,7 @@ public:
 		/* Bits I2C_SLV1_REG_DIS: */
 		/*
 		 * When set, the transaction does not write a register value, it will only read data, or
-		 *           write data. 
+		 * write data.
 		 */
 		struct I2C_SLV1_REG_DIS
 		{
@@ -578,12 +578,12 @@ public:
 		/* Bits I2C_SLV1_GRP: */
 		/*
 		 * External sensor data typically comes in as groups of two bytes. This bit is used to
-		 *           determine if the groups are from the slave’s register address 0 and 1, 2 and 3, etc..,
-		 *           or if the groups are address 1 and 2, 3 and 4, etc.
-		 *           0 indicates slave register addresses 0 and 1 are grouped together (odd numbered
-		 *           register ends the group). 1 indicates slave register addresses 1 and 2 are grouped
-		 *           together (even numbered register ends the group). This allows byte swapping of
-		 *           registers that are grouped starting at any address. 
+		 * determine if the groups are from the slave’s register address 0 and 1, 2 and 3, etc..,
+		 * or if the groups are address 1 and 2, 3 and 4, etc.
+		 * 0 indicates slave register addresses 0 and 1 are grouped together (odd numbered
+		 * register ends the group). 1 indicates slave register addresses 1 and 2 are grouped
+		 * together (even numbered register ends the group). This allows byte swapping of
+		 * registers that are grouped starting at any address.
 		 */
 		struct I2C_SLV1_GRP
 		{
@@ -620,7 +620,7 @@ public:
 	
 	/*
 	 * REG I2C_SLV1_DO:
-	 * type USR3, bank 3 
+	 * type USR3, bank 3
 	 */
 	struct I2C_SLV1_DO
 	{
@@ -656,7 +656,7 @@ public:
 	
 	/*
 	 * REG I2C_SLV2_ADDR:
-	 * type USR3, bank 3 
+	 * type USR3, bank 3
 	 */
 	struct I2C_SLV2_ADDR
 	{
@@ -665,7 +665,7 @@ public:
 		/* Bits I2C_SLV2_RNW: */
 		/*
 		 * 1 - Transfer is a read.
-		 *           0 - Transfer is a write. 
+		 * 0 - Transfer is a write.
 		 */
 		struct I2C_SLV2_RNW
 		{
@@ -702,7 +702,7 @@ public:
 	
 	/*
 	 * REG I2C_SLV2_REG:
-	 * type USR3, bank 3 
+	 * type USR3, bank 3
 	 */
 	struct I2C_SLV2_REG
 	{
@@ -738,7 +738,7 @@ public:
 	
 	/*
 	 * REG I2C_SLV2_CTRL:
-	 * type USR3, bank 3 
+	 * type USR3, bank 3
 	 */
 	struct I2C_SLV2_CTRL
 	{
@@ -747,9 +747,9 @@ public:
 		/* Bits I2C_SLV2_EN: */
 		/*
 		 * 1 - Enable reading data from this slave at the sample rate and storing data at the first
-		 *           available EXT_SENS_DATA register as determined by I2C_SLV0_EN, I2C_SLV0_LENG,
-		 *           I2C_SLV1_EN and I2C_SLV1_LENG.
-		 *           0 - Function is disabled for this slave. 
+		 * available EXT_SENS_DATA register as determined by I2C_SLV0_EN, I2C_SLV0_LENG,
+		 * I2C_SLV1_EN and I2C_SLV1_LENG.
+		 * 0 - Function is disabled for this slave.
 		 */
 		struct I2C_SLV2_EN
 		{
@@ -759,10 +759,10 @@ public:
 		/* Bits I2C_SLV2_BYTE_SW: */
 		/*
 		 * 1 - Swap bytes when reading both the low and high byte of a word. Note there is
-		 *           nothing to swap after reading the first byte if I2C_SLV2_REG[0] = 1, or if the last byte
-		 *           read has a register address lsb = 0.
-		 *           See I2C_SLV1_CTRL for an example.
-		 *           0 - No swapping occurs, bytes are written in order read. 
+		 * nothing to swap after reading the first byte if I2C_SLV2_REG[0] = 1, or if the last byte
+		 * read has a register address lsb = 0.
+		 * See I2C_SLV1_CTRL for an example.
+		 * 0 - No swapping occurs, bytes are written in order read.
 		 */
 		struct I2C_SLV2_BYTE_SW
 		{
@@ -772,7 +772,7 @@ public:
 		/* Bits I2C_SLV2_REG_DIS: */
 		/*
 		 * When set, the transaction does not write a register value, it will only read data, or
-		 *           write data. 
+		 * write data.
 		 */
 		struct I2C_SLV2_REG_DIS
 		{
@@ -782,12 +782,12 @@ public:
 		/* Bits I2C_SLV2_GRP: */
 		/*
 		 * External sensor data typically comes in as groups of two bytes. This bit is used to
-		 *           determine if the groups are from the slave’s register address 0 and 1, 2 and 3, etc..,
-		 *           or if the groups are address 1 and 2, 3 and 4, etc.
-		 *           0 indicates slave register addresses 0 and 1 are grouped together (odd numbered
-		 *           register ends the group). 1 indicates slave register addresses 1 and 2 are grouped
-		 *           together (even numbered register ends the group). This allows byte swapping of
-		 *           registers that are grouped starting at any address. 
+		 * determine if the groups are from the slave’s register address 0 and 1, 2 and 3, etc..,
+		 * or if the groups are address 1 and 2, 3 and 4, etc.
+		 * 0 indicates slave register addresses 0 and 1 are grouped together (odd numbered
+		 * register ends the group). 1 indicates slave register addresses 1 and 2 are grouped
+		 * together (even numbered register ends the group). This allows byte swapping of
+		 * registers that are grouped starting at any address.
 		 */
 		struct I2C_SLV2_GRP
 		{
@@ -824,7 +824,7 @@ public:
 	
 	/*
 	 * REG I2C_SLV2_DO:
-	 * type USR3, bank 3 
+	 * type USR3, bank 3
 	 */
 	struct I2C_SLV2_DO
 	{
@@ -860,7 +860,7 @@ public:
 	
 	/*
 	 * REG I2C_SLV3_ADDR:
-	 * type USR3, bank 3 
+	 * type USR3, bank 3
 	 */
 	struct I2C_SLV3_ADDR
 	{
@@ -869,7 +869,7 @@ public:
 		/* Bits I2C_SLV3_RNW: */
 		/*
 		 * 1 - Transfer is a read.
-		 *           0 - Transfer is a write. 
+		 * 0 - Transfer is a write.
 		 */
 		struct I2C_SLV3_RNW
 		{
@@ -906,7 +906,7 @@ public:
 	
 	/*
 	 * REG I2C_SLV3_REG:
-	 * type USR3, bank 3 
+	 * type USR3, bank 3
 	 */
 	struct I2C_SLV3_REG
 	{
@@ -942,7 +942,7 @@ public:
 	
 	/*
 	 * REG I2C_SLV3_CTRL:
-	 * type USR3, bank 3 
+	 * type USR3, bank 3
 	 */
 	struct I2C_SLV3_CTRL
 	{
@@ -951,9 +951,9 @@ public:
 		/* Bits I2C_SLV3_EN: */
 		/*
 		 * 1 - Enable reading data from this slave at the sample rate and storing data at the first
-		 *           available EXT_SENS_DATA register as determined by I2C_SLV0_EN, I2C_SLV0_LENG,
-		 *           I2C_SLV1_EN, I2C_SLV1_LENG, I2C_SLV2_EN and I2C_SLV2_LENG.
-		 *           0 - Function is disabled for this slave. 
+		 * available EXT_SENS_DATA register as determined by I2C_SLV0_EN, I2C_SLV0_LENG,
+		 * I2C_SLV1_EN, I2C_SLV1_LENG, I2C_SLV2_EN and I2C_SLV2_LENG.
+		 * 0 - Function is disabled for this slave.
 		 */
 		struct I2C_SLV3_EN
 		{
@@ -963,10 +963,10 @@ public:
 		/* Bits I2C_SLV3_BYTE_SW: */
 		/*
 		 * 1 - Swap bytes when reading both the low and high byte of a word.  Note there is
-		 *           nothing to swap after reading the first byte if I2C_SLV3_REG[0] = 1, or if the last byte
-		 *           read has a register address lsb = 0.
-		 *           See I2C_SLV1_CTRL for an example.
-		 *           0 - No swapping occurs, bytes are written in order read. 
+		 * nothing to swap after reading the first byte if I2C_SLV3_REG[0] = 1, or if the last byte
+		 * read has a register address lsb = 0.
+		 * See I2C_SLV1_CTRL for an example.
+		 * 0 - No swapping occurs, bytes are written in order read.
 		 */
 		struct I2C_SLV3_BYTE_SW
 		{
@@ -976,7 +976,7 @@ public:
 		/* Bits I2C_SLV3_REG_DIS: */
 		/*
 		 * When set, the transaction does not write a register value, it will only read data, or
-		 *           write data. 
+		 * write data.
 		 */
 		struct I2C_SLV3_REG_DIS
 		{
@@ -986,12 +986,12 @@ public:
 		/* Bits I2C_SLV3_GRP: */
 		/*
 		 * External sensor data typically comes in as groups of two bytes. This bit is used to
-		 *           determine if the groups are from the slave’s register address 0 and 1, 2 and 3, etc..,
-		 *           or if the groups are address 1 and 2, 3 and 4, etc.
-		 *           0 indicates slave register addresses 0 and 1 are grouped together (odd numbered
-		 *           register ends the group). 1 indicates slave register addresses 1 and 2 are grouped
-		 *           together (even numbered register ends the group). This allows byte swapping of
-		 *           registers that are grouped starting at any address. 
+		 * determine if the groups are from the slave’s register address 0 and 1, 2 and 3, etc..,
+		 * or if the groups are address 1 and 2, 3 and 4, etc.
+		 * 0 indicates slave register addresses 0 and 1 are grouped together (odd numbered
+		 * register ends the group). 1 indicates slave register addresses 1 and 2 are grouped
+		 * together (even numbered register ends the group). This allows byte swapping of
+		 * registers that are grouped starting at any address.
 		 */
 		struct I2C_SLV3_GRP
 		{
@@ -1028,7 +1028,7 @@ public:
 	
 	/*
 	 * REG I2C_SLV3_DO:
-	 * type USR3, bank 3 
+	 * type USR3, bank 3
 	 */
 	struct I2C_SLV3_DO
 	{
@@ -1064,8 +1064,8 @@ public:
 	
 	/*
 	 * REG I2C_SLV4_ADDR:
-	 * type USR3, bank 3 
-	 * The I2C Slave 4 interface can be used to perform only single byte read and write transactions. 
+	 * type USR3, bank 3
+	 * The I2C Slave 4 interface can be used to perform only single byte read and write transactions.
 	 */
 	struct I2C_SLV4_ADDR
 	{
@@ -1074,7 +1074,7 @@ public:
 		/* Bits I2C_SLV4_RNW: */
 		/*
 		 * 1 - Transfer is a read.
-		 *           0 - Transfer is a write. 
+		 * 0 - Transfer is a write.
 		 */
 		struct I2C_SLV4_RNW
 		{
@@ -1111,7 +1111,7 @@ public:
 	
 	/*
 	 * REG I2C_SLV4_REG:
-	 * type USR3, bank 3 
+	 * type USR3, bank 3
 	 */
 	struct I2C_SLV4_REG
 	{
@@ -1147,7 +1147,7 @@ public:
 	
 	/*
 	 * REG I2C_SLV4_CTRL:
-	 * type USR3, bank 3 
+	 * type USR3, bank 3
 	 */
 	struct I2C_SLV4_CTRL
 	{
@@ -1156,10 +1156,10 @@ public:
 		/* Bits I2C_SLV4_EN: */
 		/*
 		 * 1 - Enable data transfer with this slave at the sample rate. If read command, store
-		 *           data in I2C_SLV4_DI register, if write command, write data stored in I2C_SLV4_DO
-		 *           register. Bit is cleared when a single transfer is complete. Be sure to write
-		 *           I2C_SLV4_DO first.
-		 *           0 - Function is disabled for this slave. 
+		 * data in I2C_SLV4_DI register, if write command, write data stored in I2C_SLV4_DO
+		 * register. Bit is cleared when a single transfer is complete. Be sure to write
+		 * I2C_SLV4_DO first.
+		 * 0 - Function is disabled for this slave.
 		 */
 		struct I2C_SLV4_EN
 		{
@@ -1169,7 +1169,7 @@ public:
 		/* Bits I2C_SLV4_INT_EN: */
 		/*
 		 * 1 - Enables the completion of the I2C slave 4 data transfer to cause an interrupt.
-		 *           0 - Completion of the I2C slave 4 data transfer will not cause an interrupt. 
+		 * 0 - Completion of the I2C slave 4 data transfer will not cause an interrupt.
 		 */
 		struct I2C_SLV4_INT_EN
 		{
@@ -1179,7 +1179,7 @@ public:
 		/* Bits I2C_SLV4_REG_DIS: */
 		/*
 		 * When set, the transaction does not write a register value, it will only read data, or
-		 *           write data. 
+		 * write data.
 		 */
 		struct I2C_SLV4_REG_DIS
 		{
@@ -1189,7 +1189,7 @@ public:
 		/* Bits I2C_SLV4_DLY: */
 		/*
 		 * When enabled via the I2C_MST_DELAY_CTRL, those slaves will only be enabled
-		 *           every1/(1+I2C_SLV4_DLY) samples as determined by I2C_MST_ODR_CONFIG. 
+		 * every1/(1+I2C_SLV4_DLY) samples as determined by I2C_MST_ODR_CONFIG.
 		 */
 		struct I2C_SLV4_DLY
 		{
@@ -1219,7 +1219,7 @@ public:
 	
 	/*
 	 * REG I2C_SLV4_DO:
-	 * type USR3, bank 3 
+	 * type USR3, bank 3
 	 */
 	struct I2C_SLV4_DO
 	{
@@ -1255,7 +1255,7 @@ public:
 	
 	/*
 	 * REG I2C_SLV4_DI:
-	 * type USR3, bank 3 
+	 * type USR3, bank 3
 	 */
 	struct I2C_SLV4_DI
 	{
@@ -1291,7 +1291,7 @@ public:
 	
 	/*
 	 * REG REG_BANK_SEL:
-	 * type , bank 3 
+	 * type , bank 3
 	 */
 	struct REG_BANK_SEL
 	{
@@ -1306,10 +1306,10 @@ public:
 		/* Bits USER_BANK: */
 		/*
 		 * Use the following values in this bit-field to select a USER BANK.
-		 *           0: Select USER BANK 0.
-		 *           1: Select USER BANK 1.
-		 *           2: Select USER BANK 2.
-		 *           3: Select USER BANK 3. 
+		 * 0: Select USER BANK 0.
+		 * 1: Select USER BANK 1.
+		 * 2: Select USER BANK 2.
+		 * 3: Select USER BANK 3.
 		 */
 		struct USER_BANK
 		{
