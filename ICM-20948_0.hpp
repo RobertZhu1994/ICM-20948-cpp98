@@ -2,12 +2,17 @@
  * name:        ICM-20948
  * description: Low power 9-axis MotionTracking device that is ideally suited for Smartphones, Tablets, Wearable Sensors, and IoT applications.
  * manuf:       TDK Invensense
- * version:     0.1
+ * version:     Version 0.1
  * url:         https://www.invensense.com/wp-content/uploads/2016/06/DS-000189-ICM-20948-v1.3.pdf
  * date:        2017-10-18
  * author       https://chisl.io/
  * file:        ICM-20948_0.hpp
  */
+
+/*                                                                                                       *
+ *                                   THIS FILE IS AUTOMATICALLY CREATED                                  *
+ *                                    D O     N O T     M O D I F Y  !                                   *
+ *                                                                                                       */
 
 #include <cinttypes>
 
@@ -43,6 +48,7 @@ public:
 		 */
 		struct WHO_AM_I_
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b11101010; // 8'b11101010
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -76,65 +82,59 @@ public:
 		static const uint16_t __address = 3;
 		
 		/* Bits DMP_EN: */
-		/*
-		 * 1 - Enables DMP features.
-		 * 0 - DMP features are disabled after the current processing round has completed.
-		 */
 		struct DMP_EN
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b10000000; // [7]
+			static const uint8_t ENABLE_DMP = 0b1; // 1 - Enables DMP features.
+			static const uint8_t DISABLE_DMP = 0b0; // 0 - DMP features are disabled after the current processing round has completed.
 		};
 		/* Bits FIFO_EN: */
 		/*
-		 * 1 - Enable FIFO operation mode.
-		 * 0 - Disable FIFO access from serial interface.
 		 * To disable FIFO writes by DMA, use FIFO_EN register. To disable possible FIFO writes
 		 * from DMP, disable the DMP.
 		 */
 		struct FIFO_EN
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b01000000; // [6]
+			static const uint8_t ENABLE_FIFO = 0b1; // 1 - Enable FIFO operation mode.
+			static const uint8_t DISABLE_FIFO = 0b0; // 0 - Disable FIFO access from serial interface.
 		};
 		/* Bits I2C_MST_EN: */
-		/*
-		 * 1 - Enable the I2C Master I/F module; pins ES_DA and ES_SCL are isolated from pins
-		 * SDA/SDI and SCL/ SCLK.
-		 * 0 - Disable I2C Master I/F module; pins ES_DA and ES_SCL are logically driven by pins
-		 * SDA/SDI and SCL/ SCLK.
-		 */
 		struct I2C_MST_EN
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00100000; // [5]
+			static const uint8_t ENABLE = 0b1; // 1 - Enable the I2C Master I/F module; pins ES_DA and ES_SCL are isolated from pins SDA/SDI and SCL/ SCLK.
+			static const uint8_t DISABLE = 0b0; // 0 - Disable I2C Master I/F module; pins ES_DA and ES_SCL are logically driven by pins SDA/SDI and SCL/ SCLK.
 		};
 		/* Bits I2C_IF_DIS: */
-		/* 1 - Reset I2C Slave module and put the serial interface in SPI mode only.  */
 		struct I2C_IF_DIS
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00010000; // [4]
+			static const uint8_t RESET = 0b1; // 1 - Reset I2C Slave module and put the serial interface in SPI mode only.
 		};
 		/* Bits DMP_RST: */
-		/*
-		 * 1 - Reset DMP module. Reset is asynchronous. This bit auto clears after one clock
-		 * cycle of the internal 20 MHz clock.
-		 */
 		struct DMP_RST
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00001000; // [3]
+			static const uint8_t RESET = 0b1; // 1 - Reset DMP module. Reset is asynchronous. This bit auto clears after one clock cycle of the internal 20 MHz clock.
 		};
 		/* Bits SRAM_RST: */
-		/*
-		 * 1 - Reset SRAM module. Reset is asynchronous. This bit auto clears after one clock
-		 * cycle of the internal 20 MHz clock.
-		 */
 		struct SRAM_RST
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00000100; // [2]
+			static const uint8_t RESET_SRAM = 0b1; // 1 - Reset SRAM module. Reset is asynchronous. This bit auto clears after one clock cycle of the internal 20 MHz clock. §
 		};
 		/* Bits I2C_MST_RST: */
 		/*
@@ -145,12 +145,15 @@ public:
 		 */
 		struct I2C_MST_RST
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00000010; // [1]
+			static const uint8_t RESET_I2C_MASTER = 0b1; // 
 		};
 		/* Bits reserved_0: */
 		struct reserved_0
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00000001; // [0]
 		};
@@ -186,6 +189,7 @@ public:
 		/* Bits reserved_0: */
 		struct reserved_0
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b10000000; // [7]
 		};
@@ -197,6 +201,7 @@ public:
 		 */
 		struct I2C_MST_CYCLE
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b1; // 1'b1
 			static const uint8_t mask = 0b01000000; // [6]
 		};
@@ -208,6 +213,7 @@ public:
 		 */
 		struct ACCEL_CYCLE
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00100000; // [5]
 		};
@@ -219,12 +225,14 @@ public:
 		 */
 		struct GYRO_CYCLE
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00010000; // [4]
 		};
 		/* Bits reserved_1: */
 		struct reserved_1
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0000; // 4'b0
 			static const uint8_t mask = 0b00001111; // [0,1,2,3]
 		};
@@ -264,6 +272,7 @@ public:
 		 */
 		struct DEVICE_RESET
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b10000000; // [7]
 		};
@@ -274,6 +283,7 @@ public:
 		 */
 		struct SLEEP
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b1; // 1'b1
 			static const uint8_t mask = 0b01000000; // [6]
 		};
@@ -289,12 +299,14 @@ public:
 		 */
 		struct LP_EN
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00100000; // [5]
 		};
 		/* Bits reserved_0: */
 		struct reserved_0
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00010000; // [4]
 		};
@@ -302,6 +314,7 @@ public:
 		/* When set to 1, this bit disables the temperature sensor.  */
 		struct TEMP_DIS
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00001000; // [3]
 		};
@@ -316,6 +329,7 @@ public:
 		 */
 		struct CLKSEL
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b001; // 3'b1
 			static const uint8_t mask = 0b00000111; // [0,1,2]
 		};
@@ -351,6 +365,7 @@ public:
 		/* Bits reserved_0: */
 		struct reserved_0
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b00; // 2'b0
 			static const uint8_t mask = 0b11000000; // [6,7]
 		};
@@ -362,6 +377,7 @@ public:
 		 */
 		struct DISABLE_ACCEL
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b000; // 3'b0
 			static const uint8_t mask = 0b00111000; // [3,4,5]
 		};
@@ -373,6 +389,7 @@ public:
 		 */
 		struct DISABLE_GYRO
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b000; // 3'b0
 			static const uint8_t mask = 0b00000111; // [0,1,2]
 		};
@@ -412,6 +429,7 @@ public:
 		 */
 		struct INT1_ACTL
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b10000000; // [7]
 		};
@@ -422,6 +440,7 @@ public:
 		 */
 		struct INT1_OPEN
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b01000000; // [6]
 		};
@@ -432,6 +451,7 @@ public:
 		 */
 		struct INT1_LATCH__EN
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00100000; // [5]
 		};
@@ -449,6 +469,7 @@ public:
 		 */
 		struct INT_ANYRD_2CLEAR
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00010000; // [4]
 		};
@@ -459,6 +480,7 @@ public:
 		 */
 		struct ACTL_FSYNC
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00001000; // [3]
 		};
@@ -471,6 +493,7 @@ public:
 		 */
 		struct FSYNC_INT_MODE_EN
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00000100; // [2]
 		};
@@ -481,12 +504,14 @@ public:
 		 */
 		struct BYPASS_EN
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00000010; // [1]
 		};
 		/* Bits reserved_0: */
 		struct reserved_0
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00000001; // [0]
 		};
@@ -526,12 +551,14 @@ public:
 		 */
 		struct REG_WOF_EN
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b10000000; // [7]
 		};
 		/* Bits reserved_0: */
 		struct reserved_0
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b000; // 3'b0
 			static const uint8_t mask = 0b01110000; // [4,5,6]
 		};
@@ -542,6 +569,7 @@ public:
 		 */
 		struct WOM_INT_EN
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00001000; // [3]
 		};
@@ -553,6 +581,7 @@ public:
 		 */
 		struct PLL_RDY_EN
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00000100; // [2]
 		};
@@ -563,6 +592,7 @@ public:
 		 */
 		struct DMP_INT1_EN
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00000010; // [1]
 		};
@@ -573,6 +603,7 @@ public:
 		 */
 		struct I2C_MST_INT_EN
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00000001; // [0]
 		};
@@ -608,6 +639,7 @@ public:
 		/* Bits reserved_0: */
 		struct reserved_0
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0000000; // 7'b0
 			static const uint8_t mask = 0b11111110; // [1,2,3,4,5,6,7]
 		};
@@ -619,6 +651,7 @@ public:
 		 */
 		struct RAW_DATA_0_RDY_EN
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00000001; // [0]
 		};
@@ -654,6 +687,7 @@ public:
 		/* Bits reserved_0: */
 		struct reserved_0
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b000; // 3'b0
 			static const uint8_t mask = 0b11100000; // [5,6,7]
 		};
@@ -664,6 +698,7 @@ public:
 		 */
 		struct FIFO_OVERFLOW_EN
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b00000; // 5'b0
 			static const uint8_t mask = 0b00011111; // [0,1,2,3,4]
 		};
@@ -699,6 +734,7 @@ public:
 		/* Bits reserved_0: */
 		struct reserved_0
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b000; // 3'b0
 			static const uint8_t mask = 0b11100000; // [5,6,7]
 		};
@@ -709,6 +745,7 @@ public:
 		 */
 		struct FIFO_WM_EN
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b00000; // 5'b0
 			static const uint8_t mask = 0b00011111; // [0,1,2,3,4]
 		};
@@ -750,6 +787,7 @@ public:
 		 */
 		struct PASS_THROUGH
 		{
+			/* MODE rc */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b10000000; // [7]
 		};
@@ -761,6 +799,7 @@ public:
 		 */
 		struct I2C_SLV4_DONE
 		{
+			/* MODE rc */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b01000000; // [6]
 		};
@@ -771,6 +810,7 @@ public:
 		 */
 		struct I2C_LOST_ARB
 		{
+			/* MODE rc */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00100000; // [5]
 		};
@@ -781,6 +821,7 @@ public:
 		 */
 		struct I2C_SLV4_NACK
 		{
+			/* MODE rc */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00010000; // [4]
 		};
@@ -791,6 +832,7 @@ public:
 		 */
 		struct I2C_SLV3_NACK
 		{
+			/* MODE rc */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00001000; // [3]
 		};
@@ -801,6 +843,7 @@ public:
 		 */
 		struct I2C_SLV2_NACK
 		{
+			/* MODE rc */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00000100; // [2]
 		};
@@ -811,6 +854,7 @@ public:
 		 */
 		struct I2C_SLV1_NACK
 		{
+			/* MODE rc */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00000010; // [1]
 		};
@@ -821,6 +865,7 @@ public:
 		 */
 		struct I2C_SLV0_NACK
 		{
+			/* MODE rc */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00000001; // [0]
 		};
@@ -856,6 +901,7 @@ public:
 		/* Bits reserved_0: */
 		struct reserved_0
 		{
+			/* MODE rc */
 			static const uint8_t dflt = 0b0000; // 4'b0
 			static const uint8_t mask = 0b11110000; // [4,5,6,7]
 		};
@@ -863,6 +909,7 @@ public:
 		/* 1 - Wake on motion interrupt occurred.  */
 		struct WOM_INT
 		{
+			/* MODE rc */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00001000; // [3]
 		};
@@ -870,6 +917,7 @@ public:
 		/* 1 - Indicates that the PLL has been enabled and is ready (delay of 4 ms ensures lock).  */
 		struct PLL_RDY_INT
 		{
+			/* MODE rc */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00000100; // [2]
 		};
@@ -877,6 +925,7 @@ public:
 		/* 1 - Indicates the DMP has generated INT1 interrupt.  */
 		struct DMP_INT1
 		{
+			/* MODE rc */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00000010; // [1]
 		};
@@ -884,6 +933,7 @@ public:
 		/* 1 - Indicates I2C master has generated an interrupt.  */
 		struct I2C_MST_INT
 		{
+			/* MODE rc */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00000001; // [0]
 		};
@@ -919,6 +969,7 @@ public:
 		/* Bits reserved_0: */
 		struct reserved_0
 		{
+			/* MODE rc */
 			static const uint8_t dflt = 0b0000000; // 7'b0
 			static const uint8_t mask = 0b11111110; // [1,2,3,4,5,6,7]
 		};
@@ -926,6 +977,7 @@ public:
 		/* 1 - Sensor Register Raw Data, from all sensors, is updated and ready to be read.  */
 		struct RAW_DATA_0_RDY_INT
 		{
+			/* MODE rc */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00000001; // [0]
 		};
@@ -961,6 +1013,7 @@ public:
 		/* Bits reserved_0: */
 		struct reserved_0
 		{
+			/* MODE rc */
 			static const uint8_t dflt = 0b000; // 3'b0
 			static const uint8_t mask = 0b11100000; // [5,6,7]
 		};
@@ -968,6 +1021,7 @@ public:
 		/* 1 - FIFO Overflow interrupt occurred.  */
 		struct FIFO_OVERFLOW_INT
 		{
+			/* MODE rc */
 			static const uint8_t dflt = 0b00000; // 5'b0
 			static const uint8_t mask = 0b00011111; // [0,1,2,3,4]
 		};
@@ -1003,6 +1057,7 @@ public:
 		/* Bits reserved_0: */
 		struct reserved_0
 		{
+			/* MODE rc */
 			static const uint8_t dflt = 0b000; // 3'b0
 			static const uint8_t mask = 0b11100000; // [5,6,7]
 		};
@@ -1010,6 +1065,7 @@ public:
 		/* 1 - Watermark interrupt for FIFO occurred.  */
 		struct FIFO_WM_INT
 		{
+			/* MODE rc */
 			static const uint8_t dflt = 0b00000; // 5'b0
 			static const uint8_t mask = 0b00011111; // [0,1,2,3,4]
 		};
@@ -1052,6 +1108,7 @@ public:
 		 */
 		struct DELAY_TIMEH_
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b00000000; // 8'b0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -1095,6 +1152,7 @@ public:
 		 */
 		struct DELAY_TIMEL_
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b00000000; // 8'b0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -1131,6 +1189,7 @@ public:
 		/* High Byte of Accelerometer X-axis data.  */
 		struct ACCEL_XOUT_H_
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b00000000; // 8'b0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -1172,6 +1231,7 @@ public:
 		 */
 		struct ACCEL_XOUT_L_
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b00000000; // 8'b0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -1208,6 +1268,7 @@ public:
 		/* High Byte of Accelerometer Y-axis data.  */
 		struct ACCEL_YOUT_H_
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b00000000; // 8'b0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -1249,6 +1310,7 @@ public:
 		 */
 		struct ACCEL_YOUT_L_
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b00000000; // 8'b0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -1285,6 +1347,7 @@ public:
 		/* High Byte of Accelerometer Z-axis data.  */
 		struct ACCEL_ZOUT_H_
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b00000000; // 8'b0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -1326,6 +1389,7 @@ public:
 		 */
 		struct ACCEL_ZOUT_L_
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b00000000; // 8'b0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -1362,6 +1426,7 @@ public:
 		/* High Byte of Gyroscope X-axis data.  */
 		struct GYRO_XOUT_H_
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b00000000; // 8'b0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -1403,6 +1468,7 @@ public:
 		 */
 		struct GYRO_XOUT_L_
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b00000000; // 8'b0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -1439,6 +1505,7 @@ public:
 		/* High Byte of Gyroscope Y-axis data.  */
 		struct GYRO_YOUT_H_
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b00000000; // 8'b0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -1480,6 +1547,7 @@ public:
 		 */
 		struct GYRO_YOUT_L_
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b00000000; // 8'b0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -1516,6 +1584,7 @@ public:
 		/* High Byte of Gyroscope Z-axis data.  */
 		struct GYRO_ZOUT_H_
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b00000000; // 8'b0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -1557,6 +1626,7 @@ public:
 		 */
 		struct GYRO_ZOUT_L_
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b00000000; // 8'b0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -1593,6 +1663,7 @@ public:
 		/* High Byte of Temp sensor data.  */
 		struct TEMP_OUT_H_
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b00000000; // 8'b0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -1634,6 +1705,7 @@ public:
 		 */
 		struct TEMP_OUT_L_
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b00000000; // 8'b0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -1674,6 +1746,7 @@ public:
 		 */
 		struct EXT_SLV_SENS_DATA_00_
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b00000000; // 8'b0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -1714,6 +1787,7 @@ public:
 		 */
 		struct EXT_SLV_SENS_DATA_01_
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b00000000; // 8'b0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -1754,6 +1828,7 @@ public:
 		 */
 		struct EXT_SLV_SENS_DATA_02_
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b00000000; // 8'b0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -1794,6 +1869,7 @@ public:
 		 */
 		struct EXT_SLV_SENS_DATA_03_
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b00000000; // 8'b0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -1834,6 +1910,7 @@ public:
 		 */
 		struct EXT_SLV_SENS_DATA_04_
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b00000000; // 8'b0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -1874,6 +1951,7 @@ public:
 		 */
 		struct EXT_SLV_SENS_DATA_05_
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b00000000; // 8'b0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -1914,6 +1992,7 @@ public:
 		 */
 		struct EXT_SLV_SENS_DATA_06_
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b00000000; // 8'b0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -1954,6 +2033,7 @@ public:
 		 */
 		struct EXT_SLV_SENS_DATA_07_
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b00000000; // 8'b0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -1994,6 +2074,7 @@ public:
 		 */
 		struct EXT_SLV_SENS_DATA_08_
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b00000000; // 8'b0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -2034,6 +2115,7 @@ public:
 		 */
 		struct EXT_SLV_SENS_DATA_09_
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b00000000; // 8'b0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -2074,6 +2156,7 @@ public:
 		 */
 		struct EXT_SLV_SENS_DATA_10_
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b00000000; // 8'b0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -2114,6 +2197,7 @@ public:
 		 */
 		struct EXT_SLV_SENS_DATA_11_
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b00000000; // 8'b0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -2154,6 +2238,7 @@ public:
 		 */
 		struct EXT_SLV_SENS_DATA_12_
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b00000000; // 8'b0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -2194,6 +2279,7 @@ public:
 		 */
 		struct EXT_SLV_SENS_DATA_13_
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b00000000; // 8'b0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -2234,6 +2320,7 @@ public:
 		 */
 		struct EXT_SLV_SENS_DATA_14_
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b00000000; // 8'b0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -2274,6 +2361,7 @@ public:
 		 */
 		struct EXT_SLV_SENS_DATA_15_
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b00000000; // 8'b0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -2314,6 +2402,7 @@ public:
 		 */
 		struct EXT_SLV_SENS_DATA_16_
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b00000000; // 8'b0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -2354,6 +2443,7 @@ public:
 		 */
 		struct EXT_SLV_SENS_DATA_17_
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b00000000; // 8'b0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -2394,6 +2484,7 @@ public:
 		 */
 		struct EXT_SLV_SENS_DATA_18_
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b00000000; // 8'b0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -2434,6 +2525,7 @@ public:
 		 */
 		struct EXT_SLV_SENS_DATA_19_
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b00000000; // 8'b0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -2474,6 +2566,7 @@ public:
 		 */
 		struct EXT_SLV_SENS_DATA_20_
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b00000000; // 8'b0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -2514,6 +2607,7 @@ public:
 		 */
 		struct EXT_SLV_SENS_DATA_21_
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b00000000; // 8'b0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -2554,6 +2648,7 @@ public:
 		 */
 		struct EXT_SLV_SENS_DATA_22_
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b00000000; // 8'b0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -2594,6 +2689,7 @@ public:
 		 */
 		struct EXT_SLV_SENS_DATA_23_
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b00000000; // 8'b0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -2629,6 +2725,7 @@ public:
 		/* Bits reserved_0: */
 		struct reserved_0
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0000; // 4'b0
 			static const uint8_t mask = 0b11110000; // [4,5,6,7]
 		};
@@ -2640,6 +2737,7 @@ public:
 		 */
 		struct SLV_3_FIFO_EN
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00001000; // [3]
 		};
@@ -2651,6 +2749,7 @@ public:
 		 */
 		struct SLV_2_FIFO_EN
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00000100; // [2]
 		};
@@ -2662,6 +2761,7 @@ public:
 		 */
 		struct SLV_1_FIFO_EN
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00000010; // [1]
 		};
@@ -2673,6 +2773,7 @@ public:
 		 */
 		struct SLV_0_FIFO_EN
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00000001; // [0]
 		};
@@ -2708,6 +2809,7 @@ public:
 		/* Bits reserved_0: */
 		struct reserved_0
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b000; // 3'b0
 			static const uint8_t mask = 0b11100000; // [5,6,7]
 		};
@@ -2719,6 +2821,7 @@ public:
 		 */
 		struct ACCEL_FIFO_EN
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00010000; // [4]
 		};
@@ -2729,6 +2832,7 @@ public:
 		 */
 		struct GYRO_Z_FIFO_EN
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00001000; // [3]
 		};
@@ -2739,6 +2843,7 @@ public:
 		 */
 		struct GYRO_Y_FIFO_EN
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00000100; // [2]
 		};
@@ -2749,6 +2854,7 @@ public:
 		 */
 		struct GYRO_X_FIFO_EN
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00000010; // [1]
 		};
@@ -2759,6 +2865,7 @@ public:
 		 */
 		struct TEMP_FIFO_EN
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00000001; // [0]
 		};
@@ -2794,6 +2901,7 @@ public:
 		/* Bits reserved_0: */
 		struct reserved_0
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b000; // 3'b0
 			static const uint8_t mask = 0b11100000; // [5,6,7]
 		};
@@ -2804,6 +2912,7 @@ public:
 		 */
 		struct FIFO_RESET
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b00000; // 5'b0
 			static const uint8_t mask = 0b00011111; // [0,1,2,3,4]
 		};
@@ -2839,6 +2948,7 @@ public:
 		/* Bits reserved_0: */
 		struct reserved_0
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b000; // 3'b0
 			static const uint8_t mask = 0b11100000; // [5,6,7]
 		};
@@ -2852,6 +2962,7 @@ public:
 		 */
 		struct FIFO_MODE_
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b00000; // 5'b0
 			static const uint8_t mask = 0b00011111; // [0,1,2,3,4]
 		};
@@ -2887,6 +2998,7 @@ public:
 		/* Bits reserved_0: */
 		struct reserved_0
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b000; // 3'b0
 			static const uint8_t mask = 0b11100000; // [5,6,7]
 		};
@@ -2897,6 +3009,7 @@ public:
 		 */
 		struct FIFO_CNT
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b00000; // 5'b0
 			static const uint8_t mask = 0b00011111; // [0,1,2,3,4]
 		};
@@ -2933,6 +3046,7 @@ public:
 		/* Low bits, count indicates the number of written bytes in the FIFO.  */
 		struct FIFO_CNT
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b00000000; // 8'b0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -2974,6 +3088,7 @@ public:
 		 */
 		struct FIFO_R_W_
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b00000000; // 8'b0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -3010,12 +3125,14 @@ public:
 		/* Wake on FSYNC interrupt status. Cleared on read.  */
 		struct WOF_STATUS
 		{
+			/* MODE rc */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b10000000; // [7]
 		};
 		/* Bits reserved_0: */
 		struct reserved_0
 		{
+			/* MODE rc */
 			static const uint8_t dflt = 0b000; // 3'b0
 			static const uint8_t mask = 0b01110000; // [4,5,6]
 		};
@@ -3027,6 +3144,7 @@ public:
 		 */
 		struct RAW_DATA_RDY
 		{
+			/* MODE rc */
 			static const uint8_t dflt = 0b0000; // 4'b0
 			static const uint8_t mask = 0b00001111; // [0,1,2,3]
 		};
@@ -3062,6 +3180,7 @@ public:
 		/* Bits reserved_0: */
 		struct reserved_0
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0000000; // 7'b0
 			static const uint8_t mask = 0b11111110; // [1,2,3,4,5,6,7]
 		};
@@ -3069,6 +3188,7 @@ public:
 		/* This bit should be set to 1 if interrupt status for each sensor is required.  */
 		struct FIFO_CFG_
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00000001; // [0]
 		};
@@ -3104,6 +3224,7 @@ public:
 		/* Bits reserved_0: */
 		struct reserved_0
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b00; // 2'b0
 			static const uint8_t mask = 0b11000000; // [6,7]
 		};
@@ -3117,12 +3238,14 @@ public:
 		 */
 		struct USER_BANK
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b00; // 2'b0
 			static const uint8_t mask = 0b00110000; // [4,5]
 		};
 		/* Bits reserved_1: */
 		struct reserved_1
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0000; // 4'b0
 			static const uint8_t mask = 0b00001111; // [0,1,2,3]
 		};
