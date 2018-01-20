@@ -2,12 +2,17 @@
  * name:        ICM-20948
  * description: Low power 9-axis MotionTracking device that is ideally suited for Smartphones, Tablets, Wearable Sensors, and IoT applications.
  * manuf:       TDK Invensense
- * version:     0.1
+ * version:     Version 0.1
  * url:         https://www.invensense.com/wp-content/uploads/2016/06/DS-000189-ICM-20948-v1.3.pdf
  * date:        2017-10-18
  * author       https://chisl.io/
  * file:        ICM-20948_1.hpp
  */
+
+/*                                                                                                       *
+ *                                   THIS FILE IS AUTOMATICALLY CREATED                                  *
+ *                                    D O     N O T     M O D I F Y  !                                   *
+ *                                                                                                       */
 
 #include <cinttypes>
 
@@ -44,6 +49,7 @@ public:
 		 */
 		struct XG_ST_DATA
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b00000000; // 8'b0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -84,6 +90,7 @@ public:
 		 */
 		struct YG_ST_DATA
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b00000000; // 8'b0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -124,6 +131,7 @@ public:
 		 */
 		struct ZG_ST_DATA
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b00000000; // 8'b0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -160,6 +168,7 @@ public:
 		/* Contains self-test data for the X Accelerometer.  */
 		struct XA_ST_DATA
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b00000000; // 8'b0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -196,6 +205,7 @@ public:
 		/* Contains self-test data for the Y Accelerometer.  */
 		struct YA_ST_DATA
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b00000000; // 8'b0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -232,6 +242,7 @@ public:
 		/* Contains self-test data for the Z Accelerometer.  */
 		struct ZA_ST_DATA
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b00000000; // 8'b0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -268,6 +279,7 @@ public:
 		/* Upper bits of the X accelerometer offset cancellation.  */
 		struct XA_OFFS
 		{
+			/* MODE rw */
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
 	};
@@ -303,11 +315,13 @@ public:
 		/* Lower bits of the X accelerometer offset cancellation.  */
 		struct XA_OFFS
 		{
+			/* MODE rw */
 			static const uint8_t mask = 0b11111110; // [1,2,3,4,5,6,7]
 		};
 		/* Bits reserved_0: */
 		struct reserved_0
 		{
+			/* MODE rw */
 			static const uint8_t mask = 0b00000001; // [0]
 		};
 	};
@@ -343,6 +357,7 @@ public:
 		/* Upper bits of the Y accelerometer offset cancellation.  */
 		struct YA_OFFS
 		{
+			/* MODE rw */
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
 	};
@@ -378,11 +393,13 @@ public:
 		/* Lower bits of the Y accelerometer offset cancellation.  */
 		struct YA_OFFS
 		{
+			/* MODE rw */
 			static const uint8_t mask = 0b11111110; // [1,2,3,4,5,6,7]
 		};
 		/* Bits reserved_0: */
 		struct reserved_0
 		{
+			/* MODE rw */
 			static const uint8_t mask = 0b00000001; // [0]
 		};
 	};
@@ -418,6 +435,7 @@ public:
 		/* Upper bits of the Z accelerometer offset cancellation.  */
 		struct ZA_OFFS
 		{
+			/* MODE rw */
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
 	};
@@ -453,11 +471,13 @@ public:
 		/* Lower bits of the Z accelerometer offset cancellation.  */
 		struct ZA_OFFS
 		{
+			/* MODE rw */
 			static const uint8_t mask = 0b11111110; // [1,2,3,4,5,6,7]
 		};
 		/* Bits reserved_0: */
 		struct reserved_0
 		{
+			/* MODE rw */
 			static const uint8_t mask = 0b00000001; // [0]
 		};
 	};
@@ -493,6 +513,7 @@ public:
 		/* System PLL clock period error (signed, [-10%, +10%]).  */
 		struct TBC_PLL
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b00000000; // 8'b0
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -519,7 +540,7 @@ public:
 	
 	/*
 	 * REG REG_BANK_SEL:
-	 * type , bank 1
+	 * type -, bank 1
 	 */
 	struct REG_BANK_SEL
 	{
@@ -528,25 +549,26 @@ public:
 		/* Bits reserved_0: */
 		struct reserved_0
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b00; // 2'b0
 			static const uint8_t mask = 0b11000000; // [6,7]
 		};
 		/* Bits USER_BANK: */
-		/*
-		 * Use the following values in this bit-field to select a USER BANK.
-		 * 0: Select USER BANK 0.
-		 * 1: Select USER BANK 1.
-		 * 2: Select USER BANK 2.
-		 * 3: Select USER BANK 3.
-		 */
+		/* Use the values in this bit-field to select a USER BANK.  */
 		struct USER_BANK
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b00; // 2'b0
 			static const uint8_t mask = 0b00110000; // [4,5]
+			static const uint8_t USER_BANK_0 = 0; // 
+			static const uint8_t USER_BANK_1 = 1; // 
+			static const uint8_t USER_BANK_2 = 2; // 
+			static const uint8_t USER_BANK_3 = 3; // 
 		};
 		/* Bits reserved_1: */
 		struct reserved_1
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0000; // 4'b0
 			static const uint8_t mask = 0b00001111; // [0,1,2,3]
 		};
