@@ -444,12 +444,12 @@ public:
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b01000000; // [6]
 		};
-		/* Bits INT1_LATCH__EN: */
+		/* Bits INT1_LATCH_EN: */
 		/*
 		 * 1 - INT1 pin level held until interrupt status is cleared.
 		 * 0 - INT1 pin indicates interrupt pulse is width 50 µs.
 		 */
-		struct INT1_LATCH__EN
+		struct INT1_LATCH_EN
 		{
 			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
